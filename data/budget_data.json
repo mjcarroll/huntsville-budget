@@ -1,0 +1,602 @@
+{
+ "2021": {
+  "funds": [
+   "General Fund",
+   "Grants Fund",
+   "Capital Projects Fund",
+   "Debt Service Fund",
+   "Other Governmental Funds"
+  ],
+  "revenues": {
+   "Taxes": [
+    203739750,
+    0,
+    90699849,
+    0,
+    108278098
+   ],
+   "Licenses & Permits": [
+    36532679,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Fines & Forfeitures": [
+    2322943,
+    242500,
+    0,
+    0,
+    1454107
+   ],
+   "Charges for Services": [
+    23968956,
+    532489,
+    0,
+    0,
+    474538
+   ],
+   "Intergovernmental": [
+    10874613,
+    14713499,
+    23842387,
+    0,
+    4688703
+   ],
+   "Interest": [
+    35588,
+    9565,
+    22395,
+    22275,
+    50282
+   ],
+   "Miscellaneous": [
+    2527044,
+    559364,
+    18226527,
+    0,
+    2560990
+   ]
+  },
+  "expenditures": {
+   "General Government": [
+    41552553,
+    0,
+    3944,
+    0,
+    585
+   ],
+   "Public Safety": [
+    99614429,
+    0,
+    0,
+    0,
+    1054199
+   ],
+   "Public Services": [
+    66740348,
+    7253230,
+    11529739,
+    0,
+    17950196
+   ],
+   "Urban Development": [
+    14520018,
+    8353387,
+    111251,
+    0,
+    3505455
+   ],
+   "Intergovernmental Assist.": [
+    0,
+    0,
+    0,
+    0,
+    29961029
+   ],
+   "Capital Outlay": [
+    0,
+    1432714,
+    130204735,
+    0,
+    35736215
+   ],
+   "Debt Service": [
+    0,
+    0,
+    2858,
+    68434510,
+    5397531
+   ]
+  }
+ },
+ "2022": {
+  "funds": [
+   "General Fund",
+   "Grants Fund",
+   "Capital Improvements Fund",
+   "PBA City Hall Fund",
+   "Debt Service Fund",
+   "Other Governmental Funds"
+  ],
+  "revenues": {
+   "Taxes": [
+    225930442,
+    0,
+    101590696,
+    0,
+    0,
+    132506141
+   ],
+   "Licenses & Permits": [
+    41565147,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Fines & Forfeitures": [
+    2541199,
+    197202,
+    0,
+    0,
+    0,
+    1401163
+   ],
+   "Charges for Services": [
+    11786273,
+    533483,
+    0,
+    0,
+    0,
+    603288
+   ],
+   "Intergovernmental": [
+    1476787,
+    15338225,
+    7187383,
+    0,
+    0,
+    5731823
+   ],
+   "Interest": [
+    527190,
+    12036,
+    528249,
+    -214812,
+    672,
+    73526
+   ],
+   "Miscellaneous": [
+    5316971,
+    329383,
+    1483938,
+    0,
+    0,
+    2183457
+   ]
+  },
+  "expenditures": {
+   "General Government": [
+    48333691,
+    361,
+    300,
+    21531,
+    0,
+    280
+   ],
+   "Public Safety": [
+    105733999,
+    0,
+    0,
+    0,
+    0,
+    1241147
+   ],
+   "Public Services": [
+    57112141,
+    10536434,
+    17951314,
+    0,
+    0,
+    20478088
+   ],
+   "Urban Development": [
+    17376683,
+    8167356,
+    1122264,
+    0,
+    0,
+    3945877
+   ],
+   "Intergovernmental Assist.": [
+    0,
+    543207,
+    0,
+    0,
+    0,
+    33356649
+   ],
+   "Capital Outlay": [
+    0,
+    0,
+    74059138,
+    17918788,
+    0,
+    65279544
+   ],
+   "Debt Service": [
+    675499,
+    0,
+    0,
+    530489,
+    78705810,
+    7749307
+   ]
+  }
+ },
+ "2023": {
+  "funds": [
+   "General Fund",
+   "Grants Fund",
+   "Capital Improvements Fund",
+   "Capital Projects Fund",
+   "Debt Service Fund",
+   "Other Governmental Funds"
+  ],
+  "revenues": {
+   "Taxes": [
+    243911618,
+    0,
+    108401164,
+    0,
+    0,
+    149202785
+   ],
+   "Licenses & Permits": [
+    43051868,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Fines & Forfeitures": [
+    2290763,
+    66491,
+    0,
+    0,
+    0,
+    1540088
+   ],
+   "Charges for Services": [
+    11715473,
+    567199,
+    114720,
+    0,
+    0,
+    834510
+   ],
+   "Intergovernmental": [
+    1313166,
+    52272338,
+    3001916,
+    0,
+    0,
+    5774599
+   ],
+   "Interest": [
+    4688544,
+    471904,
+    2428806,
+    2360438,
+    10431,
+    2955789
+   ],
+   "Miscellaneous": [
+    2898085,
+    341034,
+    3379755,
+    0,
+    0,
+    2343513
+   ]
+  },
+  "expenditures": {
+   "General Government": [
+    50900105,
+    17686608,
+    365,
+    112,
+    0,
+    42712
+   ],
+   "Public Safety": [
+    125243066,
+    0,
+    0,
+    0,
+    0,
+    1673576
+   ],
+   "Public Services": [
+    64689868,
+    27517869,
+    19938002,
+    5267297,
+    0,
+    24347102
+   ],
+   "Urban Development": [
+    18284468,
+    11110386,
+    112444,
+    0,
+    0,
+    5046430
+   ],
+   "Intergovernmental Assist.": [
+    0,
+    904229,
+    0,
+    0,
+    0,
+    35653029
+   ],
+   "Capital Outlay": [
+    0,
+    146945,
+    79215587,
+    62587812,
+    0,
+    54125568
+   ],
+   "Debt Service": [
+    2761998,
+    115977,
+    2236597,
+    0,
+    72789227,
+    31839160
+   ]
+  }
+ },
+ "2024": {
+  "funds": [
+   "General Fund",
+   "Grants Fund",
+   "Capital Improvements Fund",
+   "Capital Projects Fund",
+   "Debt Service Fund",
+   "Other Governmental Funds"
+  ],
+  "revenues": {
+   "Taxes": [
+    256782590,
+    0,
+    110949750,
+    0,
+    0,
+    167056152
+   ],
+   "Licenses & Permits": [
+    40885333,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Fines & Forfeitures": [
+    2364996,
+    122953,
+    0,
+    0,
+    0,
+    1240636
+   ],
+   "Charges for Services": [
+    11256363,
+    501954,
+    113149,
+    0,
+    0,
+    846287
+   ],
+   "Intergovernmental": [
+    2001369,
+    13152852,
+    6669511,
+    0,
+    0,
+    7245909
+   ],
+   "Interest": [
+    7075619,
+    1719631,
+    6967907,
+    4439711,
+    19012,
+    4788606
+   ],
+   "Miscellaneous": [
+    2802706,
+    522621,
+    1587536,
+    0,
+    0,
+    1993148
+   ]
+  },
+  "expenditures": {
+   "General Government": [
+    47311061,
+    1160,
+    55097,
+    748,
+    0,
+    25478
+   ],
+   "Public Safety": [
+    135265077,
+    0,
+    0,
+    0,
+    0,
+    1597275
+   ],
+   "Public Services": [
+    73532777,
+    13976913,
+    12516045,
+    37109799,
+    0,
+    25293215
+   ],
+   "Urban Development": [
+    19666891,
+    5004765,
+    583659,
+    0,
+    0,
+    4739427
+   ],
+   "Intergovernmental Assist.": [
+    0,
+    102564,
+    0,
+    0,
+    0,
+    36628843
+   ],
+   "Capital Outlay": [
+    0,
+    0,
+    40204817,
+    63159562,
+    0,
+    32103956
+   ],
+   "Debt Service": [
+    3125094,
+    69587,
+    8406375,
+    0,
+    65599119,
+    18199537
+   ]
+  }
+ },
+ "2025": {
+  "funds": [
+   "General Fund",
+   "Grants Fund",
+   "Capital Improvements Fund",
+   "Capital Projects Fund",
+   "Other Governmental Funds"
+  ],
+  "revenues": {
+   "Taxes": [
+    263901175,
+    0,
+    110727709,
+    0,
+    175301131
+   ],
+   "Licenses & Permits": [
+    41895591,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Fines & Forfeitures": [
+    2435344,
+    21335,
+    0,
+    0,
+    1435035
+   ],
+   "Charges for Services": [
+    11717909,
+    496333,
+    89830,
+    0,
+    756903
+   ],
+   "Intergovernmental": [
+    1706230,
+    20446447,
+    19730262,
+    0,
+    6122688
+   ],
+   "Interest": [
+    6885510,
+    410773,
+    6812031,
+    3000556,
+    4391292
+   ],
+   "Miscellaneous": [
+    2810620,
+    725890,
+    11193160,
+    0,
+    2376425
+   ]
+  },
+  "expenditures": {
+   "General Government": [
+    50469716,
+    1100,
+    77954,
+    0,
+    598422
+   ],
+   "Public Safety": [
+    143812028,
+    0,
+    0,
+    0,
+    1287900
+   ],
+   "Public Services": [
+    77192857,
+    10672002,
+    20011064,
+    10509440,
+    24286967
+   ],
+   "Urban Development": [
+    21235918,
+    15488510,
+    1446576,
+    0,
+    4880271
+   ],
+   "Intergovernmental Assist.": [
+    0,
+    0,
+    54810,
+    0,
+    45070809
+   ],
+   "Capital Outlay": [
+    0,
+    0,
+    97898030,
+    83305043,
+    4554383
+   ],
+   "Debt Service": [
+    2465839,
+    0,
+    19375745,
+    590275,
+    126396961
+   ]
+  }
+ }
+}

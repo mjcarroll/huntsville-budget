@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>City of Huntsville, AL — Budget Explorer</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12/dist/d3-sankey.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <h1>City of Huntsville, Alabama — Budget Explorer</h1>
+    <p class="tagline">Revenues, expenditures, fund balances, debt, and department spending, drawn from the City's Annual Comprehensive Financial Reports.</p>
+  </header>
+
+  <nav class="tabs">
+    <button data-view="sankey" class="active">Budget Flow</button>
+    <button data-view="trends">Revenue &amp; Expenditures</button>
+    <button data-view="fundbalance">Fund Balance &amp; Reserves</button>
+    <button data-view="debt">Debt &amp; Capital</button>
+    <button data-view="percapita">Growth &amp; Per Capita</button>
+    <button data-view="departments">General Fund by Department</button>
+  </nav>
+
+  <!-- ===================== SANKEY ===================== -->
+  <div class="view active" id="view-sankey">
+    <div class="panel">
+      <h2>Budget Flow</h2>
+      <p class="desc">Governmental fund revenues by source, flowing through each fund, to expenditures by function.</p>
+      <div class="controls"><span class="label">Fiscal year</span><div id="sankey-years"></div></div>
+      <div id="sankey-chart"></div>
+      <div class="stat-row" id="sankey-stats"></div>
+      <div class="legend" id="sankey-legend"></div>
+    </div>
+  </div>
+
+  <!-- ===================== TRENDS ===================== -->
+  <div class="view" id="view-trends">
+    <div class="panel">
+      <h2>Total Revenue vs. Expenditure</h2>
+      <p class="desc">Citywide governmental-fund totals, FY2016&ndash;FY2025.</p>
+      <div class="stat-row" id="trend-stats"></div>
+      <div id="trend-total-chart"></div>
+      <div class="legend" id="trend-total-legend"></div>
+    </div>
+    <div class="row">
+      <div class="panel">
+        <h2>Revenue Mix Over Time</h2>
+        <p class="desc">Composition of governmental-fund revenue by source.</p>
+        <div id="revenue-mix-chart"></div>
+        <div class="legend" id="revenue-mix-legend"></div>
+      </div>
+      <div class="panel">
+        <h2>Expenditure Mix Over Time</h2>
+        <p class="desc">Composition of governmental-fund expenditure by function.</p>
+        <div id="expenditure-mix-chart"></div>
+        <div class="legend" id="expenditure-mix-legend"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FUND BALANCE ===================== -->
+  <div class="view" id="view-fundbalance">
+    <div class="row">
+      <div class="panel">
+        <h2>General Fund Balance Composition</h2>
+        <p class="desc">GASB fund-balance classification, FY2016&ndash;FY2025.</p>
+        <div id="gf-balance-chart"></div>
+      </div>
+      <div class="panel">
+        <h2>All Other Governmental Funds</h2>
+        <p class="desc">Combined balance of every fund outside the General Fund.</p>
+        <div id="other-balance-chart"></div>
+      </div>
+    </div>
+    <div class="legend" id="balance-legend" style="margin: -6px 0 14px;"></div>
+    <div class="panel">
+      <h2>General Fund Reserve Ratio</h2>
+      <p class="desc">Unassigned General Fund balance as a share of General Fund revenue, vs. the City's 11.5% policy floor. FY2021&ndash;FY2025 (General Fund revenue isn't broken out separately before FY2021 in the data on hand).</p>
+      <div id="reserve-ratio-chart"></div>
+      <div class="legend" id="reserve-ratio-legend"></div>
+    </div>
+  </div>
+
+  <!-- ===================== DEBT ===================== -->
+  <div class="view" id="view-debt">
+    <div class="row">
+      <div class="panel">
+        <h2>Total Outstanding Debt</h2>
+        <p class="desc">Primary government, all debt types, FY2015&ndash;FY2025.</p>
+        <div id="debt-total-chart"></div>
+        <div class="legend" id="debt-total-legend"></div>
+      </div>
+      <div class="panel">
+        <h2>Debt per Capita</h2>
+        <p class="desc">Total outstanding debt divided by City population.</p>
+        <div id="debt-percapita-chart"></div>
+        <div class="legend" id="debt-percapita-legend"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Capital Outlay vs. Debt Service</h2>
+      <p class="desc">Annual capital spending and debt service (principal + interest), FY2016&ndash;FY2025.</p>
+      <div id="debt-capital-chart"></div>
+      <div class="legend" id="debt-capital-legend"></div>
+    </div>
+    <div class="panel">
+      <h2>Debt Service Burden</h2>
+      <p class="desc">Debt service as a percentage of noncapital expenditures (as reported in the ACFR statistical section).</p>
+      <div id="debt-noncapital-chart"></div>
+      <div class="legend" id="debt-noncapital-legend"></div>
+    </div>
+    <div class="panel">
+      <h2>Looking Ahead: 10-Year Capital Improvement Plan <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(planned, not actual)</span></h2>
+      <p class="desc">Planned capital expenditures, FY2026&ndash;FY2035, from the FY2026 Adopted Budget Book's 1990 and 2014 Capital Improvement Fund ten-year plans &mdash; a forward-looking budget projection, not an audited actual.</p>
+      <div id="cip-chart"></div>
+      <div class="legend" id="cip-legend"></div>
+    </div>
+  </div>
+
+  <!-- ===================== PER CAPITA ===================== -->
+  <div class="view" id="view-percapita">
+    <div class="panel">
+      <h2>Growth: Population vs. Budget</h2>
+      <p class="desc">Population, total revenue, and total expenditure, indexed to FY2016 = 100.</p>
+      <div class="stat-row" id="percapita-stats"></div>
+      <div id="index-chart"></div>
+      <div class="legend" id="index-legend"></div>
+    </div>
+    <div class="panel">
+      <h2>Revenue &amp; Expenditure per Resident</h2>
+      <p class="desc">Citywide totals divided by City population estimates each year.</p>
+      <div id="percapita-chart"></div>
+      <div class="legend" id="percapita-legend"></div>
+    </div>
+  </div>
+
+  <!-- ===================== DEPARTMENTS ===================== -->
+  <div class="view" id="view-departments">
+    <div class="panel">
+      <h2 id="dept-title">General Fund Actual Expenditures by Functional Group</h2>
+      <p class="desc">FY2021&ndash;FY2025. Covers the "General Fund - General Fund" budgetary fund; a few small blended component funds (Health &amp; Life Benefits, etc.) aren't broken out by department, so totals here run slightly under the Budget Flow view's General Fund figure.</p>
+      <div class="dept-toggle" id="dept-toggle"></div>
+      <div id="dept-chart"></div>
+      <div class="legend" id="dept-legend"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>
+      Source: City of Huntsville, Alabama, Annual Comprehensive Financial Reports (ACFR), FY2021&ndash;FY2025, available from the
+      <a href="https://www.huntsvilleal.gov/government/finances-budget/annual-comprehensive-financial-reports/" target="_blank" rel="noopener">City's Finance &amp; Budget page</a>.
+      Excludes proprietary/enterprise funds (e.g. Water Pollution Control, Parking &amp; Public Transit) and fiduciary funds. The Budget Flow view's "Bond Proceeds &amp; Transfers (net)" / "Added to Fund Balance" nodes stand in for each fund's "Other Financing Sources (Uses)" (debt issuance, bond premiums, transfers between funds), netted per fund so revenue in equals expenditure out. The multi-year trend views (Revenue &amp; Expenditures, Fund Balance, Debt &amp; Capital, Growth) use the ACFR's own 10-year statistical schedules, which reflect routine prior-period reclassifications and can differ slightly from the year-by-year figures in the Budget Flow view.
+    </p>
+    <p>Code &amp; data: <a href="https://github.com/mjcarroll/huntsville-budget" target="_blank" rel="noopener">github.com/mjcarroll/huntsville-budget</a></p>
+  </footer>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script src="js/app.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/view_sankey.js"></script>
+<script src="js/view_trends.js"></script>
+<script src="js/view_fundbalance.js"></script>
+<script src="js/view_debt.js"></script>
+<script src="js/view_percapita.js"></script>
+<script src="js/view_departments.js"></script>
+<script>App.boot();</script>
+</body>
+</html>
