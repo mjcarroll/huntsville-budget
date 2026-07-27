@@ -11,11 +11,12 @@
 
   --fund-node:      #b9b8b0;
 
-  --rev-1: #0d366b; --rev-2: #184073; --rev-3: #244a7c; --rev-4: #2f5484;
-  --rev-5: #3a5e8d; --rev-6: #456995; --rev-7: #51739e; --rev-8: #5c7da6;
-  --rev-9: #6787af; --rev-10: #7391b7; --rev-11: #7e9bc0; --rev-12: #89a5c8;
-  --rev-13: #95afd1; --rev-14: #a0bad9; --rev-15: #abc4e2; --rev-16: #b6ceea;
-  --rev-17: #c2d8f3; --rev-18: #cde2fb;
+  --rev-1: #0d366b; --rev-2: #163e72; --rev-3: #1e4678; --rev-4: #274d7f;
+  --rev-5: #305585; --rev-6: #395d8c; --rev-7: #416592; --rev-8: #4a6d99;
+  --rev-9: #53759f; --rev-10: #5c7ca6; --rev-11: #6484ac; --rev-12: #6d8cb3;
+  --rev-13: #7694ba; --rev-14: #7e9cc0; --rev-15: #87a3c7; --rev-16: #90abcd;
+  --rev-17: #99b3d4; --rev-18: #a1bbda; --rev-19: #aac3e1; --rev-20: #b3cbe7;
+  --rev-21: #bcd2ee; --rev-22: #c4daf4; --rev-23: #cde2fb;
 
   --exp-gov:   #eb6834; --exp-safe:  #1baf7a; --exp-serv:  #eda100;
   --exp-urban: #e87ba4; --exp-intgv: #008300; --exp-intgv2: #33a333; --exp-intgv3: #6dbf6d; --exp-cap:   #4a3aa7; --exp-debt:  #e34948;
@@ -40,11 +41,12 @@
     --baseline:       #383835;
     --border:         rgba(255,255,255,0.10);
     --fund-node:      #55544e;
-    --rev-1: #184073; --rev-2: #244a7b; --rev-3: #2f5483; --rev-4: #3b5e8b;
-    --rev-5: #466893; --rev-6: #52729b; --rev-7: #5d7ca3; --rev-8: #6986ab;
-    --rev-9: #7490b3; --rev-10: #809bba; --rev-11: #8ba5c2; --rev-12: #97afca;
-    --rev-13: #a2b9d2; --rev-14: #aec3da; --rev-15: #b9cde2; --rev-16: #c5d7ea;
-    --rev-17: #d0e1f2; --rev-18: #dcebfa;
+    --rev-1: #184073; --rev-2: #214879; --rev-3: #2a507f; --rev-4: #335785;
+    --rev-5: #3c5f8c; --rev-6: #456792; --rev-7: #4d6f98; --rev-8: #56769e;
+    --rev-9: #5f7ea4; --rev-10: #6886aa; --rev-11: #718eb0; --rev-12: #7a96b6;
+    --rev-13: #839dbd; --rev-14: #8ca5c3; --rev-15: #95adc9; --rev-16: #9eb5cf;
+    --rev-17: #a7bcd5; --rev-18: #afc4db; --rev-19: #b8cce1; --rev-20: #c1d4e8;
+    --rev-21: #cadbee; --rev-22: #d3e3f4; --rev-23: #dcebfa;
     --exp-gov: #d95926; --exp-safe: #199e70; --exp-serv: #c98500;
     --exp-urban: #d55181; --exp-intgv: #008300; --exp-intgv2: #33a333; --exp-intgv3: #6dbf6d; --exp-cap: #9085e9; --exp-debt: #e66767;
     --exp-debt-principal: #e66767; --exp-debt-interest: #ee8987; --exp-debt-issuance: #f5b6b4;
@@ -64,11 +66,12 @@
   --baseline:       #383835;
   --border:         rgba(255,255,255,0.10);
   --fund-node:      #55544e;
-  --rev-1: #184073; --rev-2: #244a7b; --rev-3: #2f5483; --rev-4: #3b5e8b;
-  --rev-5: #466893; --rev-6: #52729b; --rev-7: #5d7ca3; --rev-8: #6986ab;
-  --rev-9: #7490b3; --rev-10: #809bba; --rev-11: #8ba5c2; --rev-12: #97afca;
-  --rev-13: #a2b9d2; --rev-14: #aec3da; --rev-15: #b9cde2; --rev-16: #c5d7ea;
-  --rev-17: #d0e1f2; --rev-18: #dcebfa;
+  --rev-1: #184073; --rev-2: #214879; --rev-3: #2a507f; --rev-4: #335785;
+  --rev-5: #3c5f8c; --rev-6: #456792; --rev-7: #4d6f98; --rev-8: #56769e;
+  --rev-9: #5f7ea4; --rev-10: #6886aa; --rev-11: #718eb0; --rev-12: #7a96b6;
+  --rev-13: #839dbd; --rev-14: #8ca5c3; --rev-15: #95adc9; --rev-16: #9eb5cf;
+  --rev-17: #a7bcd5; --rev-18: #afc4db; --rev-19: #b8cce1; --rev-20: #c1d4e8;
+  --rev-21: #cadbee; --rev-22: #d3e3f4; --rev-23: #dcebfa;
   --exp-gov: #d95926; --exp-safe: #199e70; --exp-serv: #c98500;
   --exp-urban: #d55181; --exp-intgv: #008300; --exp-intgv2: #33a333; --exp-intgv3: #6dbf6d; --exp-cap: #9085e9; --exp-debt: #e66767;
   --exp-debt-principal: #e66767; --exp-debt-interest: #ee8987; --exp-debt-issuance: #f5b6b4;

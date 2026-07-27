@@ -72,7 +72,7 @@
     const { nodes, links, totalRevenue, totalExpenditure } = buildGraph(yearData);
 
     let width = Math.max(760, container.clientWidth);
-    let height = window.innerWidth < 700 ? 860 : 760;
+    let height = window.innerWidth < 700 ? 980 : 880;
     const margin = { top: 6, right: 6, bottom: 6, left: 6 };
 
     container.innerHTML = '';
@@ -81,7 +81,7 @@
     const sankey = d3.sankey()
       .nodeId(d => d.index)
       .nodeWidth(16)
-      .nodePadding(10)
+      .nodePadding(8)
       .nodeAlign(d3.sankeyJustify)
       .extent([[margin.left, margin.top], [width - margin.right, height - margin.bottom]]);
 

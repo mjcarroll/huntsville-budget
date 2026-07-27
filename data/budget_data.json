@@ -57,13 +57,6 @@
     0,
     0
    ],
-   "Taxes (Other Funds)": [
-    0,
-    0,
-    0,
-    0,
-    108278098
-   ],
    "Building Permits": [
     8619474,
     0,
@@ -133,6 +126,48 @@
     18226527,
     0,
     2560990
+   ],
+   "Taxes (Lodging & Liquor Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    17735772
+   ],
+   "Taxes (6.5 Mill Public Safety Debt Fund)": [
+    0,
+    0,
+    0,
+    0,
+    20409023
+   ],
+   "Taxes (6.5 Mill School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    21276419
+   ],
+   "Taxes (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    29963646
+   ],
+   "Taxes (1990 School Support Fund)": [
+    0,
+    0,
+    0,
+    0,
+    4653298
+   ],
+   "Taxes (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0,
+    0,
+    14239940
    ]
   },
   "expenditures": {
@@ -169,7 +204,7 @@
     0,
     0,
     0,
-    29961029
+    0
    ],
    "Capital Outlay": [
     0,
@@ -198,6 +233,20 @@
     2858,
     0,
     1163812
+   ],
+   "Intergovernmental Assist. (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    29961029
+   ],
+   "Intergovernmental Assist. (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0
    ]
   }
  },
@@ -266,14 +315,6 @@
     0,
     0,
     0
-   ],
-   "Taxes (Other Funds)": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    132506141
    ],
    "Building Permits": [
     9508304,
@@ -354,6 +395,54 @@
     0,
     0,
     2183457
+   ],
+   "Taxes (Lodging & Liquor Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    22483256
+   ],
+   "Taxes (6.5 Mill Public Safety Debt Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    22470322
+   ],
+   "Taxes (6.5 Mill School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    23549268
+   ],
+   "Taxes (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    33548667
+   ],
+   "Taxes (1990 School Support Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    5322646
+   ],
+   "Taxes (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    25131982
    ]
   },
   "expenditures": {
@@ -395,7 +484,7 @@
     0,
     0,
     0,
-    33356649
+    0
    ],
    "Capital Outlay": [
     0,
@@ -428,6 +517,22 @@
     530489,
     0,
     41150
+   ],
+   "Intergovernmental Assist. (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    33356649
+   ],
+   "Intergovernmental Assist. (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
    ]
   }
  },
@@ -496,14 +601,6 @@
     0,
     0,
     0
-   ],
-   "Taxes (Other Funds)": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    149202785
    ],
    "Building Permits": [
     9968792,
@@ -584,6 +681,54 @@
     0,
     0,
     2343513
+   ],
+   "Taxes (Lodging & Liquor Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    26089088
+   ],
+   "Taxes (6.5 Mill Public Safety Debt Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    26228428
+   ],
+   "Taxes (6.5 Mill School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    28044731
+   ],
+   "Taxes (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    35858217
+   ],
+   "Taxes (1990 School Support Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    5387107
+   ],
+   "Taxes (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    27595214
    ]
   },
   "expenditures": {
@@ -625,7 +770,7 @@
     0,
     0,
     0,
-    35653029
+    0
    ],
    "Capital Outlay": [
     0,
@@ -658,6 +803,22 @@
     805341,
     0,
     80500
+   ],
+   "Intergovernmental Assist. (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    35653029
+   ],
+   "Intergovernmental Assist. (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
    ]
   }
  },
@@ -726,14 +887,6 @@
     0,
     0,
     0
-   ],
-   "Taxes (Other Funds)": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    167056152
    ],
    "Building Permits": [
     6530314,
@@ -814,6 +967,54 @@
     0,
     0,
     1993148
+   ],
+   "Taxes (Lodging & Liquor Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    26250047
+   ],
+   "Taxes (6.5 Mill Public Safety Debt Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    31011669
+   ],
+   "Taxes (6.5 Mill School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    33986930
+   ],
+   "Taxes (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    36628843
+   ],
+   "Taxes (1990 School Support Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    5552001
+   ],
+   "Taxes (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    33626662
    ]
   },
   "expenditures": {
@@ -855,7 +1056,7 @@
     0,
     0,
     0,
-    36628843
+    0
    ],
    "Capital Outlay": [
     0,
@@ -882,6 +1083,22 @@
     10143025
    ],
    "Debt Service Issuance Costs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Intergovernmental Assist. (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    36628843
+   ],
+   "Intergovernmental Assist. (PBA Cummings Research Park Fund)": [
     0,
     0,
     0,
@@ -948,13 +1165,6 @@
     0,
     0,
     0
-   ],
-   "Taxes (Other Funds)": [
-    0,
-    0,
-    0,
-    0,
-    175301131
    ],
    "Building Permits": [
     5953883,
@@ -1025,6 +1235,48 @@
     11193160,
     0,
     2376425
+   ],
+   "Taxes (Lodging & Liquor Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    27196023
+   ],
+   "Taxes (6.5 Mill Public Safety Debt Fund)": [
+    0,
+    0,
+    0,
+    0,
+    33576245
+   ],
+   "Taxes (6.5 Mill School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    37305230
+   ],
+   "Taxes (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    36643415
+   ],
+   "Taxes (1990 School Support Fund)": [
+    0,
+    0,
+    0,
+    0,
+    5627251
+   ],
+   "Taxes (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0,
+    0,
+    34952967
    ]
   },
   "expenditures": {
@@ -1063,20 +1315,6 @@
     0,
     0
    ],
-   "Intergovernmental Assist. (School Property Tax Fund)": [
-    0,
-    0,
-    0,
-    0,
-    36643415
-   ],
-   "Intergovernmental Assist. (PBA Cummings Research Park Fund)": [
-    0,
-    0,
-    0,
-    0,
-    8427394
-   ],
    "Capital Outlay": [
     0,
     0,
@@ -1104,6 +1342,20 @@
     100721,
     590275,
     450194
+   ],
+   "Intergovernmental Assist. (School Property Tax Fund)": [
+    0,
+    0,
+    0,
+    0,
+    36643415
+   ],
+   "Intergovernmental Assist. (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0,
+    0,
+    8427394
    ]
   }
  }

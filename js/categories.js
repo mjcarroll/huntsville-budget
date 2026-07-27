@@ -1,6 +1,8 @@
 const Categories = (() => {
   const REV_CATEGORIES = [
-    "Sales & Use Tax", "Property Tax", "Simplified Sellers Use Tax", "Other Taxes (General Fund)", "Taxes (Other Funds)",
+    "Sales & Use Tax", "Property Tax", "Simplified Sellers Use Tax", "Other Taxes (General Fund)",
+    "Taxes (Lodging & Liquor Tax Fund)", "Taxes (6.5 Mill Public Safety Debt Fund)", "Taxes (6.5 Mill School Property Tax Fund)",
+    "Taxes (School Property Tax Fund)", "Taxes (1990 School Support Fund)", "Taxes (PBA Cummings Research Park Fund)",
     "Building Permits", "Other Licenses & Permits",
     "Fines & Forfeitures",
     "Sanitation Charges (General Fund)", "Parking Charges (General Fund)", "Other Charges for Services (General Fund)", "Charges for Services (Other Funds)",
@@ -8,12 +10,14 @@ const Categories = (() => {
     "Recreational Revenue (General Fund)", "Contributions (General Fund)", "Other Miscellaneous (General Fund)", "Miscellaneous (Other Funds)",
   ];
   const REV_COLOR_VARS = [
-    "--rev-1", "--rev-2", "--rev-3", "--rev-4", "--rev-5",
-    "--rev-6", "--rev-7",
-    "--rev-8",
-    "--rev-9", "--rev-10", "--rev-11", "--rev-12",
-    "--rev-13", "--rev-14",
-    "--rev-15", "--rev-16", "--rev-17", "--rev-18",
+    "--rev-1", "--rev-2", "--rev-3", "--rev-4",
+    "--rev-5", "--rev-6", "--rev-7",
+    "--rev-8", "--rev-9", "--rev-10",
+    "--rev-11", "--rev-12",
+    "--rev-13",
+    "--rev-14", "--rev-15", "--rev-16", "--rev-17",
+    "--rev-18", "--rev-19",
+    "--rev-20", "--rev-21", "--rev-22", "--rev-23",
   ];
 
   const EXP_CATEGORIES = [

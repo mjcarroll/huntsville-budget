@@ -29,10 +29,16 @@ page, and cross-checked against each report's own reported totals:
 
 `department_data.json` also carries each department's actual spend split into Personnel / Operating / Capital
 (and Debt Service into Principal / Interest), transcribed from the same GF budget-actual schedule's line items.
-`budget_data.json`'s FY2025 "Intergovernmental Assist." expenditure is further split into the two nonmajor funds
-that make it up -- School Property Tax Fund ($36.6M, a pure pass-through to Huntsville City Schools) and the PBA
-Cummings Research Park Fund ($8.4M) -- transcribed from the FY2025 ACFR's "Combining Statement of Revenues,
-Expenditures, and Changes in Fund Balances - Nonmajor Governmental Funds" (not yet done for FY2021-2024).
+
+`budget_data.json`'s "Taxes (Other Funds)" and "Intergovernmental Assist." (Other Funds) are further split into
+the actual nonmajor funds that make them up, for all five years -- transcribed from each year's ACFR "Combining
+Statement of Revenues, Expenditures, and Changes in Fund Balances - Nonmajor Governmental Funds":
+- **Taxes**: Lodging & Liquor Tax Fund, 6.5 Mill Public Safety Debt Fund, 6.5 Mill School Property Tax Fund,
+  School Property Tax Fund, 1990 School Support Fund, PBA Cummings Research Park Fund (fund names are verbatim
+  from the source; "Mill" funds are dedicated property-tax millage levies, separate from the General Fund's own
+  6.5-mill property tax)
+- **Intergovernmental Assistance**: School Property Tax Fund (a pure pass-through to Huntsville City Schools --
+  revenue and expenditure are identical every year) and, starting FY2025 only, the PBA Cummings Research Park Fund
 
 ### Known caveats
 
@@ -51,11 +57,13 @@ Expenditures, and Changes in Fund Balances - Nonmajor Governmental Funds" (not y
   broken out by department, so department totals run 0.4-0.9% under that figure each year.
 - Sales & Use Tax, Property Tax, Simplified Sellers Use Tax, Building Permits, and Other Licenses &
   Permits are broken out for the General Fund only (the only fund where the ACFR discloses this level
-  of detail). Any other fund carrying a Taxes balance is a Capital Improvement Plan fund -- per the
-  ACFR's own MD&A, "The Capital Improvement Fund encompasses both the 1990 and 2014 Capital Plans,"
+  of detail). Any other *major* fund carrying a Taxes balance is a Capital Improvement Plan fund -- per
+  the ACFR's own MD&A, "The Capital Improvement Fund encompasses both the 1990 and 2014 Capital Plans,"
   both funded by earmarked portions of Sales & Use Tax -- so that revenue is routed through the same
-  Sales & Use Tax node. Nonmajor "Other Governmental Funds" carry a mix of taxes (lodging, gas, etc.)
-  that isn't separately disclosed at this level, so it's shown as a single "Taxes (Other Funds)" flow.
+  Sales & Use Tax node.
+- The ACFR never separates "sales tax" from "use tax," and the City's sales/use tax rate has been flat
+  at 4.5% for all ten years on record -- there's no further split available for that category beyond
+  which fund it lands in.
 
 ## Running locally
 
