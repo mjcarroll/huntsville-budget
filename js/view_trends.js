@@ -109,6 +109,20 @@
     Charts.renderLegend(document.getElementById('expenditure-mix-legend'), [
       { items: EXP_DEF.map(s => ({ label: s.label, color: App.cssVar(s.colorVar) })) },
     ]);
+
+    const taxDef = [
+      { key: "Sales & Use Tax", label: "Sales & Use Tax", colorVar: "--rev-1" },
+      { key: "Property Tax", label: "Property Tax", colorVar: "--rev-3" },
+      { key: "Simplified Sellers Use Tax", label: "Simplified Sellers Use Tax", colorVar: "--rev-5" },
+      { key: "Lodging Tax", label: "Lodging Tax", colorVar: "--rev-7" },
+      { key: "All Other Taxes", label: "All Other Taxes", colorVar: "--rev-9" },
+    ];
+    Charts.stackedArea(document.getElementById('tax-detail-chart'), {
+      years, seriesDef: taxDef, values: trend.taxDetail, height: 300,
+    });
+    Charts.renderLegend(document.getElementById('tax-detail-legend'), [
+      { items: taxDef.map(s => ({ label: s.label, color: App.cssVar(s.colorVar) })) },
+    ]);
   }
 
   App.registerView('trends', { onShow() { render(); } });

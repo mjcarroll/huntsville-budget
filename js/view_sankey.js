@@ -1,6 +1,14 @@
 (function () {
-  const REV_CATEGORIES = ["Taxes", "Licenses & Permits", "Fines & Forfeitures", "Charges for Services", "Intergovernmental", "Interest", "Miscellaneous"];
-  const REV_COLOR_VARS = ["--rev-1", "--rev-2", "--rev-3", "--rev-4", "--rev-5", "--rev-6", "--rev-7"];
+  const REV_CATEGORIES = [
+    "Sales & Use Tax", "Property Tax", "Simplified Sellers Use Tax", "Other Taxes (General Fund)", "Taxes (Other Funds)",
+    "Building Permits", "Other Licenses & Permits",
+    "Fines & Forfeitures", "Charges for Services", "Intergovernmental", "Interest", "Miscellaneous",
+  ];
+  const REV_COLOR_VARS = [
+    "--rev-1", "--rev-2", "--rev-3", "--rev-4", "--rev-5",
+    "--rev-6", "--rev-7",
+    "--rev-8", "--rev-9", "--rev-10", "--rev-11", "--rev-12",
+  ];
   const EXP_CATEGORIES = ["General Government", "Public Safety", "Public Services", "Urban Development", "Intergovernmental Assist.", "Capital Outlay", "Debt Service"];
   const EXP_COLOR_VARS = ["--exp-gov", "--exp-safe", "--exp-serv", "--exp-urban", "--exp-intgv", "--exp-cap", "--exp-debt"];
   const BALANCE_IN = "Bond Proceeds & Transfers (net)";

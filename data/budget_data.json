@@ -8,20 +8,6 @@
    "Other Governmental Funds"
   ],
   "revenues": {
-   "Taxes": [
-    203739750,
-    0,
-    90699849,
-    0,
-    108278098
-   ],
-   "Licenses & Permits": [
-    36532679,
-    0,
-    0,
-    0,
-    0
-   ],
    "Fines & Forfeitures": [
     2322943,
     242500,
@@ -56,6 +42,55 @@
     18226527,
     0,
     2560990
+   ],
+   "Sales & Use Tax": [
+    147774579,
+    0,
+    90699849,
+    0,
+    0
+   ],
+   "Property Tax": [
+    20409023,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Simplified Sellers Use Tax": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Taxes (General Fund)": [
+    35556148,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Taxes (Other Funds)": [
+    0,
+    0,
+    0,
+    0,
+    108278098
+   ],
+   "Building Permits": [
+    8619474,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Licenses & Permits": [
+    27913205,
+    0,
+    0,
+    0,
+    0
    ]
   },
   "expenditures": {
@@ -120,22 +155,6 @@
    "Other Governmental Funds"
   ],
   "revenues": {
-   "Taxes": [
-    225930442,
-    0,
-    101590696,
-    0,
-    0,
-    132506141
-   ],
-   "Licenses & Permits": [
-    41565147,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
    "Fines & Forfeitures": [
     2541199,
     197202,
@@ -175,6 +194,62 @@
     0,
     0,
     2183457
+   ],
+   "Sales & Use Tax": [
+    167970846,
+    0,
+    101590696,
+    0,
+    0,
+    0
+   ],
+   "Property Tax": [
+    22470720,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Simplified Sellers Use Tax": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Taxes (General Fund)": [
+    35488876,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Taxes (Other Funds)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    132506141
+   ],
+   "Building Permits": [
+    9508304,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Licenses & Permits": [
+    32056843,
+    0,
+    0,
+    0,
+    0,
+    0
    ]
   },
   "expenditures": {
@@ -246,22 +321,6 @@
    "Other Governmental Funds"
   ],
   "revenues": {
-   "Taxes": [
-    243911618,
-    0,
-    108401164,
-    0,
-    0,
-    149202785
-   ],
-   "Licenses & Permits": [
-    43051868,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
    "Fines & Forfeitures": [
     2290763,
     66491,
@@ -301,6 +360,62 @@
     0,
     0,
     2343513
+   ],
+   "Sales & Use Tax": [
+    181222622,
+    0,
+    108401164,
+    0,
+    0,
+    0
+   ],
+   "Property Tax": [
+    26228428,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Simplified Sellers Use Tax": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Taxes (General Fund)": [
+    36460568,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Taxes (Other Funds)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    149202785
+   ],
+   "Building Permits": [
+    9968792,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Licenses & Permits": [
+    33083076,
+    0,
+    0,
+    0,
+    0,
+    0
    ]
   },
   "expenditures": {
@@ -372,22 +487,6 @@
    "Other Governmental Funds"
   ],
   "revenues": {
-   "Taxes": [
-    256782590,
-    0,
-    110949750,
-    0,
-    0,
-    167056152
-   ],
-   "Licenses & Permits": [
-    40885333,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
    "Fines & Forfeitures": [
     2364996,
     122953,
@@ -427,6 +526,62 @@
     0,
     0,
     1993148
+   ],
+   "Sales & Use Tax": [
+    186980842,
+    0,
+    110949750,
+    0,
+    0,
+    0
+   ],
+   "Property Tax": [
+    31011669,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Simplified Sellers Use Tax": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Taxes (General Fund)": [
+    38790079,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Taxes (Other Funds)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    167056152
+   ],
+   "Building Permits": [
+    6530314,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Licenses & Permits": [
+    34355019,
+    0,
+    0,
+    0,
+    0,
+    0
    ]
   },
   "expenditures": {
@@ -497,20 +652,6 @@
    "Other Governmental Funds"
   ],
   "revenues": {
-   "Taxes": [
-    263901175,
-    0,
-    110727709,
-    0,
-    175301131
-   ],
-   "Licenses & Permits": [
-    41895591,
-    0,
-    0,
-    0,
-    0
-   ],
    "Fines & Forfeitures": [
     2435344,
     21335,
@@ -545,6 +686,55 @@
     11193160,
     0,
     2376425
+   ],
+   "Sales & Use Tax": [
+    169716106,
+    0,
+    110727709,
+    0,
+    0
+   ],
+   "Property Tax": [
+    33576245,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Simplified Sellers Use Tax": [
+    20116432,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Taxes (General Fund)": [
+    40492392,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Taxes (Other Funds)": [
+    0,
+    0,
+    0,
+    0,
+    175301131
+   ],
+   "Building Permits": [
+    5953883,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Licenses & Permits": [
+    35941708,
+    0,
+    0,
+    0,
+    0
    ]
   },
   "expenditures": {
