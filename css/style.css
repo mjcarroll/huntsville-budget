@@ -18,7 +18,7 @@
   --rev-17: #c2d8f3; --rev-18: #cde2fb;
 
   --exp-gov:   #eb6834; --exp-safe:  #1baf7a; --exp-serv:  #eda100;
-  --exp-urban: #e87ba4; --exp-intgv: #008300; --exp-cap:   #4a3aa7; --exp-debt:  #e34948;
+  --exp-urban: #e87ba4; --exp-intgv: #008300; --exp-intgv2: #33a333; --exp-intgv3: #6dbf6d; --exp-cap:   #4a3aa7; --exp-debt:  #e34948;
   --exp-debt-principal: #a53430; --exp-debt-interest: #e34948; --exp-debt-issuance: #f2a09e;
 
   --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
@@ -46,7 +46,7 @@
     --rev-13: #a2b9d2; --rev-14: #aec3da; --rev-15: #b9cde2; --rev-16: #c5d7ea;
     --rev-17: #d0e1f2; --rev-18: #dcebfa;
     --exp-gov: #d95926; --exp-safe: #199e70; --exp-serv: #c98500;
-    --exp-urban: #d55181; --exp-intgv: #008300; --exp-cap: #9085e9; --exp-debt: #e66767;
+    --exp-urban: #d55181; --exp-intgv: #008300; --exp-intgv2: #33a333; --exp-intgv3: #6dbf6d; --exp-cap: #9085e9; --exp-debt: #e66767;
     --exp-debt-principal: #e66767; --exp-debt-interest: #ee8987; --exp-debt-issuance: #f5b6b4;
     --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
     --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
@@ -70,7 +70,7 @@
   --rev-13: #a2b9d2; --rev-14: #aec3da; --rev-15: #b9cde2; --rev-16: #c5d7ea;
   --rev-17: #d0e1f2; --rev-18: #dcebfa;
   --exp-gov: #d95926; --exp-safe: #199e70; --exp-serv: #c98500;
-  --exp-urban: #d55181; --exp-intgv: #008300; --exp-cap: #9085e9; --exp-debt: #e66767;
+  --exp-urban: #d55181; --exp-intgv: #008300; --exp-intgv2: #33a333; --exp-intgv3: #6dbf6d; --exp-cap: #9085e9; --exp-debt: #e66767;
   --exp-debt-principal: #e66767; --exp-debt-interest: #ee8987; --exp-debt-issuance: #f5b6b4;
   --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
   --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
@@ -178,6 +178,38 @@ footer.site-footer {
 footer.site-footer a { color: var(--text-secondary); }
 
 .dept-toggle { display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap; }
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  min-height: 20px;
+}
+.breadcrumb .crumb {
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.breadcrumb .crumb:hover { background: var(--border); color: var(--text-primary); }
+.breadcrumb .crumb.current { color: var(--text-primary); font-weight: 600; cursor: default; }
+.breadcrumb .crumb.current:hover { background: none; }
+.breadcrumb .sep { color: var(--text-muted); }
+
+.treemap rect { stroke: var(--surface-1); stroke-width: 1.5px; }
+.treemap rect.has-children { stroke-width: 2px; }
+.treemap rect:hover { filter: brightness(1.15); }
+.treemap text {
+  fill: #fff;
+  font-size: 11px;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+.treemap .header-text { font-size: 11px; font-weight: 600; }
+.treemap .value-text { font-size: 9.5px; opacity: 0.85; }
 
 @media (max-width: 640px) {
   .row { flex-direction: column; }

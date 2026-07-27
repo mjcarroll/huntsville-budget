@@ -1,0 +1,122 @@
+{
+  "note": "FY2026 Adopted Budget (planned, not an audited actual) -- itemized detail behind the 'Special Appropriations' lines that appear as single lump figures in the FY2021-2025 actuals elsewhere on this site. Source: FY2026 Adopted Budget Book, pp.68-70.",
+  "generalFund": {
+    "total": 4069673,
+    "categories": {
+      "Healthcare": {
+        "total": 1055000,
+        "agencies": {
+          "Community Free Dental Clinic": 100000,
+          "Heals": 35000,
+          "Huntsville Hospital Foundation": 20000,
+          "United Cerebral Palsy of Huntsville": 36000,
+          "WellStone": 864000
+        }
+      },
+      "Quality of Life": {
+        "total": 986000,
+        "agencies": {
+          "Arts Huntsville": 550000,
+          "Historic Huntsville Foundation": 30000,
+          "Huntsville Community Ballet": 40000,
+          "Huntsville Symphony Orchestra": 191000,
+          "Land Trust of North Alabama": 125000,
+          "Singing River Trail": 50000
+        }
+      },
+      "Aging Services": {
+        "total": 500000,
+        "agencies": {
+          "Huntsville-Madison County Senior Center": 440000,
+          "The Legacy Center": 60000
+        }
+      },
+      "Basic Needs": {
+        "total": 286345,
+        "agencies": {
+          "Christmas Charities Year-Round": 15000,
+          "Family Services Center (LIFT Housing)": 10000,
+          "First Stop": 171345,
+          "Food Bank of North Alabama": 50000,
+          "New Futures": 40000
+        }
+      },
+      "Resource Connection": {
+        "total": 281000,
+        "agencies": {
+          "Community Action Partnership": 100000,
+          "Madison County 310 Board": 40000,
+          "Partnership for a Drug-Free Community": 91000,
+          "United Way of Madison County": 50000
+        }
+      },
+      "Child Care & Out of School Time": {
+        "total": 245000,
+        "agencies": {
+          "Boys & Girls Club of North Alabama": 150000,
+          "Village of Promise": 50000,
+          "YMCA of Metro. Huntsville - Child Care Centers": 45000
+        }
+      },
+      "Education & Workforce": {
+        "total": 250000,
+        "agencies": {
+          "Hatch Huntsville": 50000,
+          "North Alabama Homebuilding Academy": 200000
+        }
+      },
+      "Economic Development": {
+        "total": 225000,
+        "agencies": {
+          "Downtown Huntsville, Inc.": 90000,
+          "Invest Northwest": 50000,
+          "North Alabama International Trade Association": 35000,
+          "South Huntsville Business Association": 50000
+        }
+      },
+      "Mentorship": {
+        "total": 65000,
+        "agencies": {
+          "100 Black Men of Greater Huntsville": 10000,
+          "Big Brothers Big Sisters - TN Valley": 20000,
+          "Girls, Inc.": 25000,
+          "National Coalition of 100 Black Women": 10000
+        }
+      },
+      "Legal Services & Advocacy": {
+        "total": 121000,
+        "agencies": {
+          "Global Ties - Alabama": 25000,
+          "Legal Services of Alabama": 46000,
+          "National Children's Advocacy Center": 50000
+        }
+      },
+      "Neighborhood": {
+        "total": 55328,
+        "agencies": {
+          "Huntsville Community Watch": 20328,
+          "Second Mile Development": 35000
+        }
+      }
+    }
+  },
+  "intergovernmentalAndContracts": {
+    "total": 5963023,
+    "agencies": {
+      "Huntsville-Madison County Public Library": 5632023,
+      "Other (not itemized on the page captured)": 331000
+    }
+  },
+  "lodgingAndLiquorTaxFund": {
+    "total": 3540000,
+    "agencies": {
+      "Burritt on the Mountain": 575000,
+      "EarlyWorks Museum": 700000,
+      "Fantasy Playhouse": 200000,
+      "Huntsville Botanical Garden": 500000,
+      "Huntsville Museum of Art": 1200000,
+      "U.S. Space & Rocket Center Education Foundation": 325000,
+      "Weeden House Museum": 40000
+    }
+  }
+}

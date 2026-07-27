@@ -17,6 +17,7 @@
 
   <nav class="tabs">
     <button data-view="sankey" class="active">Budget Flow</button>
+    <button data-view="tree">Income &amp; Expense Tree</button>
     <button data-view="trends">Revenue &amp; Expenditures</button>
     <button data-view="fundbalance">Fund Balance &amp; Reserves</button>
     <button data-view="debt">Debt &amp; Capital</button>
@@ -33,6 +34,29 @@
       <div id="sankey-chart"></div>
       <div class="stat-row" id="sankey-stats"></div>
       <div class="legend" id="sankey-legend"></div>
+    </div>
+  </div>
+
+  <!-- ===================== TREE ===================== -->
+  <div class="view" id="view-tree">
+    <div class="panel">
+      <h2>Income &amp; Expense Tree</h2>
+      <p class="desc">Click a rectangle to drill in; click the breadcrumb to back out. Width is proportional to dollars at every level.</p>
+      <div class="controls"><span class="label">Fiscal year</span><div id="tree-years"></div></div>
+    </div>
+    <div class="row">
+      <div class="panel">
+        <h2>Revenue</h2>
+        <p class="desc">Fund &rarr; revenue source, down to the most granular level disclosed.</p>
+        <div class="breadcrumb" id="tree-rev-breadcrumb"></div>
+        <div id="tree-rev-chart"></div>
+      </div>
+      <div class="panel">
+        <h2>Expenditures</h2>
+        <p class="desc" id="tree-exp-desc">Fund &rarr; function &rarr; department (General Fund only, where disclosed).</p>
+        <div class="breadcrumb" id="tree-exp-breadcrumb"></div>
+        <div id="tree-exp-chart"></div>
+      </div>
     </div>
   </div>
 
@@ -147,10 +171,18 @@
   <div class="view" id="view-departments">
     <div class="panel">
       <h2 id="dept-title">General Fund Actual Expenditures by Functional Group</h2>
-      <p class="desc">FY2021&ndash;FY2025. Covers the "General Fund - General Fund" budgetary fund; a few small blended component funds (Health &amp; Life Benefits, etc.) aren't broken out by department, so totals here run slightly under the Budget Flow view's General Fund figure.</p>
+      <p class="desc" id="dept-desc">FY2021&ndash;FY2025. Click a group below to see its departments, then a department to see its Personnel / Operating / Capital split.</p>
       <div class="dept-toggle" id="dept-toggle"></div>
+      <div class="dept-toggle" id="dept-subtoggle"></div>
       <div id="dept-chart"></div>
       <div class="legend" id="dept-legend"></div>
+      <p class="desc" style="margin-top:10px;">Covers the "General Fund - General Fund" budgetary fund; a few small blended component funds (Health &amp; Life Benefits, etc.) aren't broken out by department, so totals here run slightly under the Budget Flow view's General Fund figure. "Special Appropriations" lines and Debt Service aren't split into Personnel/Operating/Capital in the source schedule.</p>
+    </div>
+    <div class="panel">
+      <h2>What's in "Special Appropriations"? <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(FY2026 planned, not actual)</span></h2>
+      <p class="desc">The FY2021&ndash;2025 actuals above only report "Special Appropriations" as a single lump per functional group. No historical budget book is archived, but the current FY2026 Adopted Budget itemizes every nonprofit/agency award &mdash; General Fund awards by category, Library funding, and the Lodging &amp; Liquor Tax Fund's support for local museums and cultural institutions.</p>
+      <div id="approp-chart"></div>
+      <div class="legend" id="approp-legend"></div>
     </div>
   </div>
 
@@ -167,12 +199,15 @@
 <div class="tooltip" id="tooltip"></div>
 
 <script src="js/app.js"></script>
+<script src="js/categories.js"></script>
 <script src="js/charts.js"></script>
 <script src="js/view_sankey.js"></script>
+<script src="js/view_tree.js"></script>
 <script src="js/view_trends.js"></script>
 <script src="js/view_fundbalance.js"></script>
 <script src="js/view_debt.js"></script>
 <script src="js/view_percapita.js"></script>
+<script src="js/view_appropriations.js"></script>
 <script src="js/view_departments.js"></script>
 <script>App.boot();</script>
 </body>
