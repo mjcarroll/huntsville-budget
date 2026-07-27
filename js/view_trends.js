@@ -15,7 +15,9 @@
     { key: "Urban Development", label: "Urban Development", colorVar: "--exp-urban" },
     { key: "Intergovernmental Assist.", label: "Intergovernmental Assist.", colorVar: "--exp-intgv" },
     { key: "Capital Outlay", label: "Capital Outlay", colorVar: "--exp-cap" },
-    { key: "Debt Service", label: "Debt Service", colorVar: "--exp-debt" },
+    { key: "Debt Service Principal", label: "Debt Service - Principal", colorVar: "--exp-debt-principal" },
+    { key: "Debt Service Interest", label: "Debt Service - Interest", colorVar: "--exp-debt-interest" },
+    { key: "Debt Service Issuance Costs", label: "Debt Service - Issuance Costs", colorVar: "--exp-debt-issuance" },
   ];
 
   function buildRevenueValues(trend) {
@@ -40,9 +42,9 @@
   function buildExpenditureValues(trend) {
     const n = trend.years.length;
     const e = trend.citywideExpenditures;
-    const debt = new Array(n).fill(0);
+    const issuance = new Array(n).fill(0);
     for (let i = 0; i < n; i++) {
-      debt[i] = (e["Debt Service Principal"][i] || 0) + (e["Debt Service Interest"][i] || 0) + (e["Fiscal Charges"][i] || 0) + (e["Debt Issuance Costs"][i] || 0);
+      issuance[i] = (e["Fiscal Charges"][i] || 0) + (e["Debt Issuance Costs"][i] || 0);
     }
     return {
       "General Government": e["General Government"],
@@ -51,7 +53,9 @@
       "Urban Development": e["Urban Development"],
       "Intergovernmental Assist.": e["Intergovernmental Assist."],
       "Capital Outlay": e["Capital Outlay"],
-      "Debt Service": debt,
+      "Debt Service Principal": e["Debt Service Principal"],
+      "Debt Service Interest": e["Debt Service Interest"],
+      "Debt Service Issuance Costs": issuance,
     };
   }
 

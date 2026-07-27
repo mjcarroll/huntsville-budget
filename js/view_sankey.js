@@ -2,15 +2,27 @@
   const REV_CATEGORIES = [
     "Sales & Use Tax", "Property Tax", "Simplified Sellers Use Tax", "Other Taxes (General Fund)", "Taxes (Other Funds)",
     "Building Permits", "Other Licenses & Permits",
-    "Fines & Forfeitures", "Charges for Services", "Intergovernmental", "Interest", "Miscellaneous",
+    "Fines & Forfeitures",
+    "Sanitation Charges (General Fund)", "Parking Charges (General Fund)", "Other Charges for Services (General Fund)", "Charges for Services (Other Funds)",
+    "Intergovernmental", "Interest",
+    "Recreational Revenue (General Fund)", "Contributions (General Fund)", "Other Miscellaneous (General Fund)", "Miscellaneous (Other Funds)",
   ];
   const REV_COLOR_VARS = [
     "--rev-1", "--rev-2", "--rev-3", "--rev-4", "--rev-5",
     "--rev-6", "--rev-7",
-    "--rev-8", "--rev-9", "--rev-10", "--rev-11", "--rev-12",
+    "--rev-8",
+    "--rev-9", "--rev-10", "--rev-11", "--rev-12",
+    "--rev-13", "--rev-14",
+    "--rev-15", "--rev-16", "--rev-17", "--rev-18",
   ];
-  const EXP_CATEGORIES = ["General Government", "Public Safety", "Public Services", "Urban Development", "Intergovernmental Assist.", "Capital Outlay", "Debt Service"];
-  const EXP_COLOR_VARS = ["--exp-gov", "--exp-safe", "--exp-serv", "--exp-urban", "--exp-intgv", "--exp-cap", "--exp-debt"];
+  const EXP_CATEGORIES = [
+    "General Government", "Public Safety", "Public Services", "Urban Development", "Intergovernmental Assist.", "Capital Outlay",
+    "Debt Service Principal", "Debt Service Interest", "Debt Service Issuance Costs",
+  ];
+  const EXP_COLOR_VARS = [
+    "--exp-gov", "--exp-safe", "--exp-serv", "--exp-urban", "--exp-intgv", "--exp-cap",
+    "--exp-debt-principal", "--exp-debt-interest", "--exp-debt-issuance",
+  ];
   const BALANCE_IN = "Bond Proceeds & Transfers (net)";
   const BALANCE_OUT = "Added to Fund Balance";
 
@@ -34,19 +46,25 @@
 
     REV_CATEGORIES.forEach((cat, ci) => {
       const vals = yearData.revenues[cat] || [];
-      node(cat, REV_COLOR_VARS[ci], 'revenue');
       funds.forEach((fund, fi) => {
         const v = vals[fi] || 0;
-        if (v > 0) { node(fund, null, 'fund'); links.push({ source: cat, target: fund, value: v }); }
+        if (v > 0) {
+          node(cat, REV_COLOR_VARS[ci], 'revenue');
+          node(fund, null, 'fund');
+          links.push({ source: cat, target: fund, value: v });
+        }
       });
     });
 
     EXP_CATEGORIES.forEach((cat, ci) => {
       const vals = yearData.expenditures[cat] || [];
-      node(cat, EXP_COLOR_VARS[ci], 'expenditure');
       funds.forEach((fund, fi) => {
         const v = vals[fi] || 0;
-        if (v > 0) { node(fund, null, 'fund'); links.push({ source: fund, target: cat, value: v }); }
+        if (v > 0) {
+          node(cat, EXP_COLOR_VARS[ci], 'expenditure');
+          node(fund, null, 'fund');
+          links.push({ source: fund, target: cat, value: v });
+        }
       });
     });
 
@@ -79,7 +97,7 @@
     const { nodes, links, totalRevenue, totalExpenditure } = buildGraph(yearData);
 
     let width = Math.max(760, container.clientWidth);
-    let height = window.innerWidth < 700 ? 720 : 620;
+    let height = window.innerWidth < 700 ? 860 : 760;
     const margin = { top: 6, right: 6, bottom: 6, left: 6 };
 
     container.innerHTML = '';
@@ -88,7 +106,7 @@
     const sankey = d3.sankey()
       .nodeId(d => d.index)
       .nodeWidth(16)
-      .nodePadding(14)
+      .nodePadding(10)
       .nodeAlign(d3.sankeyJustify)
       .extent([[margin.left, margin.top], [width - margin.right, height - margin.bottom]]);
 

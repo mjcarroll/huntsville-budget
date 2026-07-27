@@ -11,12 +11,15 @@
 
   --fund-node:      #b9b8b0;
 
-  --rev-1: #0d366b; --rev-2: #104281; --rev-3: #184f95; --rev-4: #1c5cab;
-  --rev-5: #256abf; --rev-6: #2a78d6; --rev-7: #3987e5; --rev-8: #5598e7;
-  --rev-9: #6da7ec; --rev-10: #86b6ef; --rev-11: #9ec5f4; --rev-12: #b7d3f6;
+  --rev-1: #0d366b; --rev-2: #184073; --rev-3: #244a7c; --rev-4: #2f5484;
+  --rev-5: #3a5e8d; --rev-6: #456995; --rev-7: #51739e; --rev-8: #5c7da6;
+  --rev-9: #6787af; --rev-10: #7391b7; --rev-11: #7e9bc0; --rev-12: #89a5c8;
+  --rev-13: #95afd1; --rev-14: #a0bad9; --rev-15: #abc4e2; --rev-16: #b6ceea;
+  --rev-17: #c2d8f3; --rev-18: #cde2fb;
 
   --exp-gov:   #eb6834; --exp-safe:  #1baf7a; --exp-serv:  #eda100;
   --exp-urban: #e87ba4; --exp-intgv: #008300; --exp-cap:   #4a3aa7; --exp-debt:  #e34948;
+  --exp-debt-principal: #a53430; --exp-debt-interest: #e34948; --exp-debt-issuance: #f2a09e;
 
   --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
   --series-5: #e87ba4; --series-6: #008300; --series-7: #4a3aa7; --series-8: #e34948;
@@ -37,11 +40,14 @@
     --baseline:       #383835;
     --border:         rgba(255,255,255,0.10);
     --fund-node:      #55544e;
-    --rev-1: #104281; --rev-2: #184f95; --rev-3: #1c5cab; --rev-4: #256abf;
-    --rev-5: #2a78d6; --rev-6: #3987e5; --rev-7: #5598e7; --rev-8: #6da7ec;
-    --rev-9: #86b6ef; --rev-10: #9ec5f4; --rev-11: #b7d3f6; --rev-12: #cde2fb;
+    --rev-1: #184073; --rev-2: #244a7b; --rev-3: #2f5483; --rev-4: #3b5e8b;
+    --rev-5: #466893; --rev-6: #52729b; --rev-7: #5d7ca3; --rev-8: #6986ab;
+    --rev-9: #7490b3; --rev-10: #809bba; --rev-11: #8ba5c2; --rev-12: #97afca;
+    --rev-13: #a2b9d2; --rev-14: #aec3da; --rev-15: #b9cde2; --rev-16: #c5d7ea;
+    --rev-17: #d0e1f2; --rev-18: #dcebfa;
     --exp-gov: #d95926; --exp-safe: #199e70; --exp-serv: #c98500;
     --exp-urban: #d55181; --exp-intgv: #008300; --exp-cap: #9085e9; --exp-debt: #e66767;
+    --exp-debt-principal: #e66767; --exp-debt-interest: #ee8987; --exp-debt-issuance: #f5b6b4;
     --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
     --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
     --status-good: #0ca30c; --status-warn: #fab219; --status-crit: #e66767;
@@ -58,11 +64,14 @@
   --baseline:       #383835;
   --border:         rgba(255,255,255,0.10);
   --fund-node:      #55544e;
-  --rev-1: #104281; --rev-2: #184f95; --rev-3: #1c5cab; --rev-4: #256abf;
-  --rev-5: #2a78d6; --rev-6: #3987e5; --rev-7: #5598e7; --rev-8: #6da7ec;
-  --rev-9: #86b6ef; --rev-10: #9ec5f4; --rev-11: #b7d3f6; --rev-12: #cde2fb;
+  --rev-1: #184073; --rev-2: #244a7b; --rev-3: #2f5483; --rev-4: #3b5e8b;
+  --rev-5: #466893; --rev-6: #52729b; --rev-7: #5d7ca3; --rev-8: #6986ab;
+  --rev-9: #7490b3; --rev-10: #809bba; --rev-11: #8ba5c2; --rev-12: #97afca;
+  --rev-13: #a2b9d2; --rev-14: #aec3da; --rev-15: #b9cde2; --rev-16: #c5d7ea;
+  --rev-17: #d0e1f2; --rev-18: #dcebfa;
   --exp-gov: #d95926; --exp-safe: #199e70; --exp-serv: #c98500;
   --exp-urban: #d55181; --exp-intgv: #008300; --exp-cap: #9085e9; --exp-debt: #e66767;
+  --exp-debt-principal: #e66767; --exp-debt-interest: #ee8987; --exp-debt-issuance: #f5b6b4;
   --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
   --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
   --status-good: #0ca30c; --status-warn: #fab219; --status-crit: #e66767;

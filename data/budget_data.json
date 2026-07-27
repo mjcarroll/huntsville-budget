@@ -15,13 +15,6 @@
     0,
     1454107
    ],
-   "Charges for Services": [
-    23968956,
-    532489,
-    0,
-    0,
-    474538
-   ],
    "Intergovernmental": [
     10874613,
     14713499,
@@ -35,13 +28,6 @@
     22395,
     22275,
     50282
-   ],
-   "Miscellaneous": [
-    2527044,
-    559364,
-    18226527,
-    0,
-    2560990
    ],
    "Sales & Use Tax": [
     147774579,
@@ -91,6 +77,62 @@
     0,
     0,
     0
+   ],
+   "Sanitation Charges (General Fund)": [
+    13202489,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Parking Charges (General Fund)": [
+    2130491,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Charges for Services (General Fund)": [
+    8635976,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Charges for Services (Other Funds)": [
+    0,
+    532489,
+    0,
+    0,
+    474538
+   ],
+   "Recreational Revenue (General Fund)": [
+    832065,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Contributions (General Fund)": [
+    61668,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Miscellaneous (General Fund)": [
+    1633311,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Miscellaneous (Other Funds)": [
+    0,
+    559364,
+    18226527,
+    0,
+    2560990
    ]
   },
   "expenditures": {
@@ -136,12 +178,26 @@
     0,
     35736215
    ],
-   "Debt Service": [
+   "Debt Service Principal": [
+    0,
+    0,
+    0,
+    38475182,
+    1410001
+   ],
+   "Debt Service Interest": [
+    0,
+    0,
+    0,
+    29959328,
+    2823718
+   ],
+   "Debt Service Issuance Costs": [
     0,
     0,
     2858,
-    68434510,
-    5397531
+    0,
+    1163812
    ]
   }
  },
@@ -163,14 +219,6 @@
     0,
     1401163
    ],
-   "Charges for Services": [
-    11786273,
-    533483,
-    0,
-    0,
-    0,
-    603288
-   ],
    "Intergovernmental": [
     1476787,
     15338225,
@@ -186,14 +234,6 @@
     -214812,
     672,
     73526
-   ],
-   "Miscellaneous": [
-    5316971,
-    329383,
-    1483938,
-    0,
-    0,
-    2183457
    ],
    "Sales & Use Tax": [
     167970846,
@@ -250,6 +290,70 @@
     0,
     0,
     0
+   ],
+   "Sanitation Charges (General Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Parking Charges (General Fund)": [
+    2861874,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Charges for Services (General Fund)": [
+    8924399,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Charges for Services (Other Funds)": [
+    0,
+    533483,
+    0,
+    0,
+    0,
+    603288
+   ],
+   "Recreational Revenue (General Fund)": [
+    1132123,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Contributions (General Fund)": [
+    19508,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Miscellaneous (General Fund)": [
+    4165340,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Miscellaneous (Other Funds)": [
+    0,
+    329383,
+    1483938,
+    0,
+    0,
+    2183457
    ]
   },
   "expenditures": {
@@ -301,13 +405,29 @@
     0,
     65279544
    ],
-   "Debt Service": [
-    675499,
+   "Debt Service Principal": [
+    671121,
+    0,
+    0,
+    0,
+    50717981,
+    1744041
+   ],
+   "Debt Service Interest": [
+    4378,
+    0,
+    0,
+    0,
+    27987829,
+    5964116
+   ],
+   "Debt Service Issuance Costs": [
+    0,
     0,
     0,
     530489,
-    78705810,
-    7749307
+    0,
+    41150
    ]
   }
  },
@@ -329,14 +449,6 @@
     0,
     1540088
    ],
-   "Charges for Services": [
-    11715473,
-    567199,
-    114720,
-    0,
-    0,
-    834510
-   ],
    "Intergovernmental": [
     1313166,
     52272338,
@@ -352,14 +464,6 @@
     2360438,
     10431,
     2955789
-   ],
-   "Miscellaneous": [
-    2898085,
-    341034,
-    3379755,
-    0,
-    0,
-    2343513
    ],
    "Sales & Use Tax": [
     181222622,
@@ -416,6 +520,70 @@
     0,
     0,
     0
+   ],
+   "Sanitation Charges (General Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Parking Charges (General Fund)": [
+    2988801,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Charges for Services (General Fund)": [
+    8726672,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Charges for Services (Other Funds)": [
+    0,
+    567199,
+    114720,
+    0,
+    0,
+    834510
+   ],
+   "Recreational Revenue (General Fund)": [
+    1149175,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Contributions (General Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Miscellaneous (General Fund)": [
+    1748910,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Miscellaneous (Other Funds)": [
+    0,
+    341034,
+    3379755,
+    0,
+    0,
+    2343513
    ]
   },
   "expenditures": {
@@ -467,13 +635,29 @@
     0,
     54125568
    ],
-   "Debt Service": [
-    2761998,
-    115977,
+   "Debt Service Principal": [
+    2717383,
+    107866,
+    0,
+    0,
+    47031276,
+    19012264
+   ],
+   "Debt Service Interest": [
+    44615,
+    8111,
     2236597,
     0,
-    72789227,
-    31839160
+    25757951,
+    11941055
+   ],
+   "Debt Service Issuance Costs": [
+    0,
+    0,
+    0,
+    805341,
+    0,
+    80500
    ]
   }
  },
@@ -495,14 +679,6 @@
     0,
     1240636
    ],
-   "Charges for Services": [
-    11256363,
-    501954,
-    113149,
-    0,
-    0,
-    846287
-   ],
    "Intergovernmental": [
     2001369,
     13152852,
@@ -518,14 +694,6 @@
     4439711,
     19012,
     4788606
-   ],
-   "Miscellaneous": [
-    2802706,
-    522621,
-    1587536,
-    0,
-    0,
-    1993148
    ],
    "Sales & Use Tax": [
     186980842,
@@ -582,6 +750,70 @@
     0,
     0,
     0
+   ],
+   "Sanitation Charges (General Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Parking Charges (General Fund)": [
+    2799199,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Charges for Services (General Fund)": [
+    8457164,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Charges for Services (Other Funds)": [
+    0,
+    501954,
+    113149,
+    0,
+    0,
+    846287
+   ],
+   "Recreational Revenue (General Fund)": [
+    1210918,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Contributions (General Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Miscellaneous (General Fund)": [
+    1591788,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Miscellaneous (Other Funds)": [
+    0,
+    522621,
+    1587536,
+    0,
+    0,
+    1993148
    ]
   },
   "expenditures": {
@@ -633,13 +865,29 @@
     0,
     32103956
    ],
-   "Debt Service": [
-    3125094,
-    69587,
-    8406375,
+   "Debt Service Principal": [
+    3030888,
+    66356,
+    3794798,
     0,
-    65599119,
-    18199537
+    41706757,
+    8056512
+   ],
+   "Debt Service Interest": [
+    94206,
+    3231,
+    4611577,
+    0,
+    23892362,
+    10143025
+   ],
+   "Debt Service Issuance Costs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
    ]
   }
  },
@@ -659,13 +907,6 @@
     0,
     1435035
    ],
-   "Charges for Services": [
-    11717909,
-    496333,
-    89830,
-    0,
-    756903
-   ],
    "Intergovernmental": [
     1706230,
     20446447,
@@ -679,13 +920,6 @@
     6812031,
     3000556,
     4391292
-   ],
-   "Miscellaneous": [
-    2810620,
-    725890,
-    11193160,
-    0,
-    2376425
    ],
    "Sales & Use Tax": [
     169716106,
@@ -735,6 +969,62 @@
     0,
     0,
     0
+   ],
+   "Sanitation Charges (General Fund)": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Parking Charges (General Fund)": [
+    3156714,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Charges for Services (General Fund)": [
+    8561195,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Charges for Services (Other Funds)": [
+    0,
+    496333,
+    89830,
+    0,
+    756903
+   ],
+   "Recreational Revenue (General Fund)": [
+    1055847,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Contributions (General Fund)": [
+    6338,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Other Miscellaneous (General Fund)": [
+    1748435,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Miscellaneous (Other Funds)": [
+    0,
+    725890,
+    11193160,
+    0,
+    2376425
    ]
   },
   "expenditures": {
@@ -780,12 +1070,26 @@
     83305043,
     4554383
    ],
-   "Debt Service": [
-    2465839,
+   "Debt Service Principal": [
+    2380761,
     0,
-    19375745,
+    10830987,
+    0,
+    91102614
+   ],
+   "Debt Service Interest": [
+    85078,
+    0,
+    8444037,
+    0,
+    34844153
+   ],
+   "Debt Service Issuance Costs": [
+    0,
+    0,
+    100721,
     590275,
-    126396961
+    450194
    ]
   }
  }
