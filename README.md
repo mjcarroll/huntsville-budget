@@ -11,6 +11,7 @@ Views:
 - **Debt & Capital** — total outstanding debt, debt per capita, capital outlay vs. debt service
 - **Growth & Per Capita** — population growth vs. budget growth, revenue/expenditure per resident
 - **General Fund by Department** — actual General Fund spending by department, FY2021-FY2025, drill into any department for its Personnel/Operating/Capital split; plus a "what's in Special Appropriations" panel itemizing every nonprofit/agency award
+- **Schools (HCS)** — Huntsville City Schools' own government-wide revenue/expense trend, net position, pension & OPEB liability, debt, fund balance, and enrollment, FY2019-FY2024 (HCS is a legally separate state agency with its own audited financials, not part of the City's ACFR)
 - Bonus panel on Debt & Capital: **10-Year Capital Improvement Plan** — planned (not actual) capital spending FY2026-FY2035, from the FY2026 Adopted Budget Book
 
 ## Data sources
@@ -39,6 +40,38 @@ Statement of Revenues, Expenditures, and Changes in Fund Balances - Nonmajor Gov
   6.5-mill property tax)
 - **Intergovernmental Assistance**: School Property Tax Fund (a pure pass-through to Huntsville City Schools --
   revenue and expenditure are identical every year) and, starting FY2025 only, the PBA Cummings Research Park Fund
+
+`data/hcs_data.json` is transcribed by hand from Huntsville City Schools' own audited financial statements
+(FY2019-FY2024), published at the
+[HCS Finance Department's audits page](https://www.huntsvillecityschools.org/documents/departments/finance/other-financial-documents-%26-information/audits/515438).
+HCS is a legally separate agency of the State of Alabama (not a City department) and files its own annual
+audit rather than an ACFR; its fiscal year also ends September 30. Sourced from each year's Statement of
+Net Position, Statement of Activities, Balance Sheet -- Governmental Funds, the required-supplementary
+10-year Schedule of Proportionate Share of the Collective Net Pension Liability / Net OPEB Liability, and
+the Management's Discussion & Analysis enrollment table.
+
+### HCS known caveats
+
+- Revenue and expense category mixes use each year's own MD&A groupings (Instruction, Instructional
+  Support, Operation & Maintenance, Auxiliary [Transportation + Food Service], General Administration,
+  Interest & Fiscal Charges, Other), which stay consistent across years even where the underlying fund
+  structure changed -- Capital Projects became its own major fund starting the FY2023 audit, having
+  previously been folded into "Other Governmental Funds."
+- FY2019 and FY2021 fund-balance composition (the GASB nonspendable/restricted/committed/assigned/unassigned
+  split) wasn't available in the audits reviewed -- only FY2020, FY2022, FY2023, and FY2024 fund-level
+  balance sheets were transcribed, so the General Fund / Other Funds composition charts interpolate across
+  the FY2021 gap. The combined governmental fund balance *total* (no composition breakdown) is available
+  for all six years.
+- "City-Issued Bonds for HCS Capital Projects" is the outstanding par value of bonds the City of Huntsville
+  issues on HCS's behalf, serviced from HCS's share of local property tax (per each audit's long-term debt
+  note) -- only years with a disclosed balance are charted (FY2020, FY2022-FY2024), and the series is
+  non-monotonic because of periodic refunding activity, not steady borrowing.
+- The Net Pension/OPEB Liability swings (particularly the OPEB liability's collapse in FY2020 and again in
+  FY2023) reflect the State's PEEHIP/TRS actuarial discount-rate assumptions resetting, not a change in
+  benefits or HCS's actual cash funding.
+- 2019 and 2021 net position components (Net Investment in Capital Assets / Restricted / Unrestricted) are
+  taken from each audit's MD&A Table 1, which rounds to the nearest $10,000; all other years use exact
+  Statement of Net Position figures.
 
 ### Known caveats
 

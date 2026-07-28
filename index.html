@@ -23,6 +23,7 @@
     <button data-view="debt">Debt &amp; Capital</button>
     <button data-view="percapita">Growth &amp; Per Capita</button>
     <button data-view="departments">General Fund by Department</button>
+    <button data-view="hcs">Schools (HCS)</button>
   </nav>
 
   <!-- ===================== SANKEY ===================== -->
@@ -186,11 +187,109 @@
     </div>
   </div>
 
+  <!-- ===================== HCS (SCHOOLS) ===================== -->
+  <div class="view" id="view-hcs">
+    <div class="panel">
+      <h2>Huntsville City Schools</h2>
+      <p class="desc">The Huntsville City Board of Education is a legally separate state agency, not a City department &mdash; but the City funds a meaningful share of it (see the "Taxes" and "Intergovernmental Assistance" pass-throughs in the Budget Flow view) and issues bonds on its behalf for capital projects. Figures below come from HCS's own audited financial statements, FY2019&ndash;FY2024, filed separately from the City's ACFR.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Total Revenue vs. Expenses</h2>
+      <p class="desc">Government-wide (Statement of Activities) totals, FY2019&ndash;FY2024.</p>
+      <div class="stat-row" id="hcs-total-stats"></div>
+      <div id="hcs-total-chart"></div>
+      <div class="legend" id="hcs-total-legend"></div>
+    </div>
+
+    <div class="row">
+      <div class="panel">
+        <h2>Revenue Mix</h2>
+        <p class="desc">Ad valorem (property) tax revenue more than doubled starting FY2022, even as enrollment stayed flat.</p>
+        <div id="hcs-revenue-mix-chart"></div>
+        <div class="legend" id="hcs-revenue-mix-legend"></div>
+      </div>
+      <div class="panel">
+        <h2>Expense Mix</h2>
+        <p class="desc">By function, per each year's Management's Discussion &amp; Analysis.</p>
+        <div id="hcs-expense-mix-chart"></div>
+        <div class="legend" id="hcs-expense-mix-legend"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Net Position</h2>
+      <p class="desc">Net position roughly doubled FY2021&ndash;FY2024, but a large share of that is an actuarial artifact of the OPEB liability swing below, not new operating strength.</p>
+      <div id="hcs-networth-chart"></div>
+      <div class="legend" id="hcs-networth-legend"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Net Pension &amp; OPEB Liability</h2>
+      <p class="desc">The OPEB liability collapses seen in FY2020 and again FY2023 aren't benefit cuts &mdash; they're the State's PEEHIP retiree health plan re-rating its discount-rate assumption (the "Single Equivalent Interest Rate"), which swings the reported liability by tens of millions with no change in HCS's actual cash obligations.</p>
+      <div id="hcs-liabilities-chart"></div>
+      <div class="legend" id="hcs-liabilities-legend"></div>
+    </div>
+
+    <div class="row">
+      <div class="panel">
+        <h2>Board-Issued Debt</h2>
+        <p class="desc">Bonds, warrants, and leases on HCS's own balance sheet &mdash; steadily amortizing down, with no new HCS-issued debt since FY2019.</p>
+        <div id="hcs-debt-chart"></div>
+      </div>
+      <div class="panel">
+        <h2>City-Issued Bonds for HCS Capital Projects</h2>
+        <p class="desc">Serviced from HCS's share of local property tax but issued by the City on HCS's behalf (par value; only years with a disclosed balance shown &mdash; refunding activity makes this non-monotonic).</p>
+        <div id="hcs-citydebt-chart"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Governmental Fund Balance</h2>
+      <p class="desc">Combined ending balance across all governmental funds, FY2019&ndash;FY2024. The FY2023 jump reflects a new bond issuance funding the Central Office/Career Tech construction program (see Capital Projects Fund).</p>
+      <div id="hcs-fundtotal-chart"></div>
+    </div>
+
+    <div class="row">
+      <div class="panel">
+        <h2>General Fund Balance Composition</h2>
+        <p class="desc">GASB fund-balance classification. FY2021 fund-level detail wasn't available in the audits reviewed, so the line interpolates across that gap &mdash; FY2020, FY2022&ndash;FY2024 are real data points.</p>
+        <div id="hcs-gfbalance-chart"></div>
+      </div>
+      <div class="panel">
+        <h2>All Other Governmental Funds</h2>
+        <p class="desc">Special Revenue, Capital Projects, Debt Service, and Other funds combined.</p>
+        <div id="hcs-otherbalance-chart"></div>
+      </div>
+    </div>
+    <div class="legend" id="hcs-balance-legend" style="margin: -6px 0 14px;"></div>
+
+    <div class="panel">
+      <h2>Student Enrollment</h2>
+      <p class="desc">Average daily attendance count, FY2006&ndash;FY2024 (excludes Pre-K). Essentially flat for two decades, even as the City of Huntsville's population grew from 180,105 (2010 census) to 215,006 (2020 census).</p>
+      <div id="hcs-enrollment-chart"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Audit &amp; Governance Notes</h2>
+      <ul style="font-size:0.85rem;color:var(--text-secondary);line-height:1.6;margin:0;padding-left:20px;">
+        <li>The FY2019&ndash;FY2020 audits flagged excessive turnover and understaffing in the Finance Department as a significant deficiency, requiring outside consulting help to keep the department running.</li>
+        <li>The FY2020&ndash;FY2023 audits repeatedly cited timecards not approved before payroll across multiple federal programs (Special Education, ESSER, Title I, Child Nutrition); the finding was marked corrected in the FY2024 audit.</li>
+        <li>The audit firm changed from Mercer &amp; Associates, P.C. (FY2019&ndash;FY2023) to Aldridge, Borden and Company, P.C. (FY2024).</li>
+      </ul>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <p>
       Source: City of Huntsville, Alabama, Annual Comprehensive Financial Reports (ACFR), FY2021&ndash;FY2025, available from the
       <a href="https://www.huntsvilleal.gov/government/finances-budget/annual-comprehensive-financial-reports/" target="_blank" rel="noopener">City's Finance &amp; Budget page</a>.
       Excludes proprietary/enterprise funds (e.g. Water Pollution Control, Parking &amp; Public Transit) and fiduciary funds. The Budget Flow view's "Bond Proceeds &amp; Transfers (net)" / "Added to Fund Balance" nodes stand in for each fund's "Other Financing Sources (Uses)" (debt issuance, bond premiums, transfers between funds), netted per fund so revenue in equals expenditure out. The multi-year trend views (Revenue &amp; Expenditures, Fund Balance, Debt &amp; Capital, Growth) use the ACFR's own 10-year statistical schedules, which reflect routine prior-period reclassifications and can differ slightly from the year-by-year figures in the Budget Flow view.
+    </p>
+    <p>
+      Schools (HCS) source: Huntsville City Board of Education audited financial statements, FY2019&ndash;FY2024, from the
+      <a href="https://www.huntsvillecityschools.org/documents/departments/finance/other-financial-documents-%26-information/audits/515438" target="_blank" rel="noopener">HCS Finance Department's audits page</a>.
+      HCS is a legally separate state agency (not a City department); its fiscal year also ends September 30. Expense and revenue mixes use each year's Management's Discussion &amp; Analysis category groupings, which are consistent across years even where the underlying fund structure changed (e.g. Capital Projects became a separate major fund starting FY2023).
     </p>
     <p>Code &amp; data: <a href="https://github.com/mjcarroll/huntsville-budget" target="_blank" rel="noopener">github.com/mjcarroll/huntsville-budget</a></p>
   </footer>
@@ -209,6 +308,7 @@
 <script src="js/view_percapita.js"></script>
 <script src="js/view_appropriations.js"></script>
 <script src="js/view_departments.js"></script>
+<script src="js/view_hcs.js"></script>
 <script>App.boot();</script>
 </body>
 </html>
