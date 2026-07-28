@@ -46,6 +46,34 @@
       ] },
     ]);
 
+    // ---- Per-pupil spending ----
+    const enrollForYears = years.map(yr => hcs.enrollment.count[hcs.enrollment.years.indexOf(yr)]);
+    const revenuePerPupil = totalRevenue.map((v, i) => v / enrollForYears[i]);
+    const expensePerPupil = totalExpense.map((v, i) => v / enrollForYears[i]);
+    const enrollChange = ((enrollForYears[last] / enrollForYears[0]) - 1) * 100;
+    const expPerPupilGrowth = ((expensePerPupil[last] / expensePerPupil[0]) - 1) * 100;
+    document.getElementById('hcs-perpupil-stats').innerHTML = `
+      <span>Expense per pupil FY${years[0]} <b>${App.fmtMoney(expensePerPupil[0], { full: true })}</b> &rarr; FY${years[last]} <b>${App.fmtMoney(expensePerPupil[last], { full: true })}</b></span>
+      <span>Expense per pupil growth <b>+${expPerPupilGrowth.toFixed(0)}%</b></span>
+      <span>Enrollment change <b>${enrollChange >= 0 ? '+' : ''}${enrollChange.toFixed(1)}%</b></span>
+    `;
+
+    Charts.multiLine(document.getElementById('hcs-perpupil-chart'), {
+      years, height: 280,
+      seriesDef: [
+        { key: 'revenue', label: 'Revenue per Pupil', colorVar: '--series-1' },
+        { key: 'expense', label: 'Expense per Pupil', colorVar: '--series-2' },
+      ],
+      values: { revenue: revenuePerPupil, expense: expensePerPupil },
+      yFormat: v => '$' + Math.round(v).toLocaleString('en-US'),
+    });
+    Charts.renderLegend(document.getElementById('hcs-perpupil-legend'), [
+      { items: [
+        { label: 'Revenue per pupil', color: App.cssVar('--series-1'), line: true },
+        { label: 'Expense per pupil', color: App.cssVar('--series-2'), line: true },
+      ] },
+    ]);
+
     // ---- Revenue mix ----
     const revDef = [
       { key: 'adValoremTax', label: 'Ad Valorem Tax', colorVar: '--rev-2' },
