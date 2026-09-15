@@ -140,10 +140,11 @@
   }
 
   let toggleInit = false;
-  window.Appropriations = {
-    render: () => {
-      if (!toggleInit) { renderToggle(); toggleInit = true; }
-      render(document.getElementById('approp-chart'));
-    },
-  };
+  function renderAll() {
+    if (!toggleInit) { renderToggle(); toggleInit = true; }
+    render(document.getElementById('approp-chart'));
+  }
+
+  window.Appropriations = { render: renderAll };
+  App.registerView('appropriations', { onShow() { renderAll(); } });
 })();

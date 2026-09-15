@@ -120,7 +120,6 @@
     onShow() {
       render();
       if (window.DepartmentsProposed) DepartmentsProposed.render();
-      if (window.Appropriations) Appropriations.render();
     },
   });
 })();

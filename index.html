@@ -41,6 +41,7 @@
     <button data-view="debt">Debt &amp; Capital</button>
     <button data-view="percapita">Growth &amp; Per Capita</button>
     <button data-view="departments">General Fund by Department</button>
+    <button data-view="appropriations">Special Appropriations</button>
     <button data-view="hcs">Schools (HCS)</button>
   </nav>
 
@@ -206,11 +207,15 @@
       <div class="dept-toggle" id="dept-proposed-subtoggle"></div>
       <div id="dept-proposed-chart"></div>
       <div class="legend" id="dept-proposed-legend"></div>
-      <p class="desc" style="margin-top:10px;">Source: FY2027 Proposed Annual Budget. "General Operations" (a catch-all General Government line) isn't broken into Personnel/Operating/Capital in the proposed budget book, so it's carried as a single line here. "Special Appropriations" isn't broken out by functional group either &mdash; see the panel below for that detail.</p>
+      <p class="desc" style="margin-top:10px;">Source: FY2027 Proposed Annual Budget. "General Operations" (a catch-all General Government line) isn't broken into Personnel/Operating/Capital in the proposed budget book, so it's carried as a single line here. "Special Appropriations" isn't broken out by functional group either &mdash; see the Special Appropriations tab for that detail.</p>
     </div>
+  </div>
+
+  <!-- ===================== SPECIAL APPROPRIATIONS ===================== -->
+  <div class="view" id="view-appropriations">
     <div class="panel">
       <h2 id="approp-title">What's in "Special Appropriations"? <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(planned, not actual)</span></h2>
-      <p class="desc" id="approp-desc">The FY2021&ndash;2025 actuals above only report "Special Appropriations" as a single lump per functional group. No historical budget book is archived, but the City's budget books itemize every nonprofit/agency award &mdash; General Fund awards by category, Library funding, and the Lodging &amp; Liquor Tax Fund's support for local museums and cultural institutions.</p>
+      <p class="desc" id="approp-desc">The FY2021&ndash;2025 actuals in General Fund by Department only report "Special Appropriations" as a single lump per functional group. No historical budget book is archived, but the City's budget books itemize every nonprofit/agency award &mdash; General Fund awards by category, Library funding, and the Lodging &amp; Liquor Tax Fund's support for local museums and cultural institutions.</p>
       <div class="dept-toggle" id="approp-year-toggle"></div>
       <div id="approp-chart"></div>
       <div class="legend" id="approp-legend"></div>

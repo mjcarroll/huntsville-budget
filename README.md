@@ -10,7 +10,8 @@ Views:
 - **Fund Balance & Reserves** — fund balance composition and the General Fund's reserve ratio vs. its 11.5% policy floor
 - **Debt & Capital** — total outstanding debt, debt per capita, capital outlay vs. debt service
 - **Growth & Per Capita** — population growth vs. budget growth, revenue/expenditure per resident
-- **General Fund by Department** — actual General Fund spending by department, FY2021-FY2025, drill into any department for its Personnel/Operating/Capital split; plus a "Looking Ahead" panel with the same drill-down for FY2025 actual/FY2026 revised/FY2027 proposed, and a "what's in Special Appropriations" panel itemizing every nonprofit/agency award (toggle between the FY2026 Adopted and FY2027 Proposed budget books)
+- **General Fund by Department** — actual General Fund spending by department, FY2021-FY2025, drill into any department for its Personnel/Operating/Capital split; plus a "Looking Ahead" panel with the same drill-down for FY2025 actual/FY2026 revised/FY2027 proposed
+- **Special Appropriations** — itemizes every nonprofit/agency award behind the "Special Appropriations" lump sums above: General Fund awards by category, Library funding, and the Lodging & Liquor Tax Fund's support for local museums and cultural institutions (toggle between the FY2026 Adopted and FY2027 Proposed budget books)
 - **Schools (HCS)** — Huntsville City Schools' own government-wide revenue/expense trend, net position, pension & OPEB liability, debt, fund balance, and enrollment, FY2019-FY2024 (HCS is a legally separate state agency with its own audited financials, not part of the City's ACFR)
 - Bonus panel on Revenue & Expenditures: **Top Revenue Sources** — the FY2027 Proposed Budget's own revenue table, FY2021 actual through FY2027 proposed
 
