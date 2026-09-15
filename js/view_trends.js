@@ -67,12 +67,10 @@
     const first = 0, last = years.length - 1;
     const revGrowth = ((revTotal[last] / revTotal[first]) - 1) * 100;
     const expGrowth = ((expTotal[last] / expTotal[first]) - 1) * 100;
-    const deficitYears = years.filter((y, i) => expTotal[i] > revTotal[i]);
 
     document.getElementById('trend-stats').innerHTML = `
       <span>Revenue growth FY${years[first]}&ndash;FY${years[last]} <b>${revGrowth >= 0 ? '+' : ''}${revGrowth.toFixed(0)}%</b></span>
       <span>Expenditure growth <b>${expGrowth >= 0 ? '+' : ''}${expGrowth.toFixed(0)}%</b></span>
-      <span>Deficit years <b>${deficitYears.length ? deficitYears.map(y => 'FY' + y).join(', ') : 'none'}</b></span>
     `;
 
     Charts.multiLine(document.getElementById('trend-total-chart'), {
@@ -127,6 +125,26 @@
     Charts.renderLegend(document.getElementById('tax-detail-legend'), [
       { items: taxDef.map(s => ({ label: s.label, color: App.cssVar(s.colorVar) })) },
     ]);
+
+    const fy2027 = App.state.fy2027;
+    if (fy2027) {
+      const rev = fy2027.topRevenueSources;
+      const revForecastDef = [
+        { key: "Sales and Use Taxes", label: "Sales and Use Taxes", colorVar: "--rev-1" },
+        { key: "Ad Valorem Taxes", label: "Ad Valorem Taxes", colorVar: "--rev-4" },
+        { key: "License Fees", label: "License Fees", colorVar: "--rev-8" },
+        { key: "PILOTs", label: "PILOTs", colorVar: "--rev-11" },
+        { key: "Simplified Sellers Use Tax", label: "Simplified Sellers Use Tax", colorVar: "--rev-15" },
+        { key: "Lodging Taxes", label: "Lodging Taxes", colorVar: "--rev-18" },
+        { key: "Permit Fees", label: "Permit Fees", colorVar: "--rev-22" },
+      ];
+      Charts.stackedArea(document.getElementById('revenue-forecast-chart'), {
+        years: rev.years, seriesDef: revForecastDef, values: rev.series, height: 300,
+      });
+      Charts.renderLegend(document.getElementById('revenue-forecast-legend'), [
+        { items: revForecastDef.map(s => ({ label: s.label, color: App.cssVar(s.colorVar) })) },
+      ]);
+    }
   }
 
   App.registerView('trends', { onShow() { render(); } });

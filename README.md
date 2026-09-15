@@ -4,15 +4,15 @@ Interactive visualizations of the City of Huntsville, Alabama's municipal budget
 City's own Annual Comprehensive Financial Reports (ACFR).
 
 Views:
-- **Budget Flow** — Sankey diagram of revenue sources -> funds -> expenditure functions, one per fiscal year (FY2021-FY2025), down to ~35 revenue/expenditure line items
+- **Budget Flow** — Sankey diagram of revenue sources -> funds -> expenditure functions, one per fiscal year (FY2021-FY2025 audited actuals, plus FY2026-FY2027 planned budget years with narrower fund coverage), down to ~35 revenue/expenditure line items
 - **Income & Expense Tree** — zoomable nested treemap of the same data, click any box to drill in, from fund all the way down to an individual department's Personnel/Operating/Capital split
 - **Revenue & Expenditures** — citywide revenue/expenditure totals and category mix over FY2016-FY2025, plus a dedicated tax-by-type chart
 - **Fund Balance & Reserves** — fund balance composition and the General Fund's reserve ratio vs. its 11.5% policy floor
 - **Debt & Capital** — total outstanding debt, debt per capita, capital outlay vs. debt service
 - **Growth & Per Capita** — population growth vs. budget growth, revenue/expenditure per resident
-- **General Fund by Department** — actual General Fund spending by department, FY2021-FY2025, drill into any department for its Personnel/Operating/Capital split; plus a "what's in Special Appropriations" panel itemizing every nonprofit/agency award
+- **General Fund by Department** — actual General Fund spending by department, FY2021-FY2025, drill into any department for its Personnel/Operating/Capital split; plus a "Looking Ahead" panel with the same drill-down for FY2025 actual/FY2026 revised/FY2027 proposed, and a "what's in Special Appropriations" panel itemizing every nonprofit/agency award (toggle between the FY2026 Adopted and FY2027 Proposed budget books)
 - **Schools (HCS)** — Huntsville City Schools' own government-wide revenue/expense trend, net position, pension & OPEB liability, debt, fund balance, and enrollment, FY2019-FY2024 (HCS is a legally separate state agency with its own audited financials, not part of the City's ACFR)
-- Bonus panel on Debt & Capital: **10-Year Capital Improvement Plan** — planned (not actual) capital spending FY2026-FY2035, from the FY2026 Adopted Budget Book
+- Bonus panel on Revenue & Expenditures: **Top Revenue Sources** — the FY2027 Proposed Budget's own revenue table, FY2021 actual through FY2027 proposed
 
 ## Data sources
 
@@ -22,11 +22,12 @@ page, and cross-checked against each report's own reported totals:
 
 | File | Source |
 |---|---|
-| `data/budget_data.json` | Each year's "Statement of Revenues, Expenditures, and Changes in Fund Balances - Governmental Funds" (FY2021-FY2025 ACFRs) |
+| `data/budget_data.json` | Each year's "Statement of Revenues, Expenditures, and Changes in Fund Balances - Governmental Funds" (FY2021-FY2025 ACFRs). FY2026 and FY2027 are planned-budget years, from the [FY2027 Proposed Budget Book](https://www.huntsvilleal.gov/wp-content/uploads/2026/09/1.-Full-Book.pdf) (General Fund, Lodging & Liquor Tax Fund, and Special Revenue Funds for both years) and the [FY2026 Adopted Budget Book](https://www.huntsvilleal.gov/wp-content/uploads/2025/09/Budget-Book-09-26-25v8withMayorLetter-2.pdf) (1990 & 2014 Capital Improvement Funds, FY2026 only -- the FY2027 book has no CIP section); full methodology and category-mapping notes are in each year's own `note` field |
 | `data/trend_data.json` | The FY2025 ACFR's statistical section: Schedules C, D, E, K, P, R (each a 10-year, FY2016-FY2025 rolling history) |
 | `data/department_data.json` | Each year's "Schedule of Revenues, Expenditures, and Changes in Fund Balances - Budget (GAAP Basis) and Actual - General Fund" (FY2021-FY2025 ACFRs) -- the same schedule's REVENUES section also supplies the Sales & Use Tax / Property Tax / Simplified Sellers Use Tax / Building Permits / Other Licenses breakdown used in Budget Flow |
-| `data/cip_data.json` | The [FY2026 Adopted Budget Book](https://www.huntsvilleal.gov/government/finances-budget/annual-municipal-and-capital-budgets/)'s 1990 & 2014 Capital Improvement Fund ten-year plans (planned, FY2026-FY2035) |
-| `data/special_appropriations_fy2026.json` | The FY2026 Adopted Budget Book's itemized Agency & Intergovernmental Appropriations list (planned, FY2026 only -- no historical archive exists) |
+| `data/special_appropriations_fy2026.json` | The [FY2026 Adopted Budget Book](https://www.huntsvilleal.gov/wp-content/uploads/2025/09/Budget-Book-09-26-25v8withMayorLetter-2.pdf)'s itemized Agency & Intergovernmental Appropriations list, pp.68-70 (planned, FY2026 only) |
+| `data/special_appropriations_fy2027.json` | The [FY2027 Proposed Outside Agency Appropriations book](https://www.huntsvilleal.gov/wp-content/uploads/2026/09/2.-Appropriations-Book-2027.pdf)'s itemized, per-agency detail (planned, FY2027 only -- reorganizes the FY2026 book's category taxonomy and folds Library funding into a new "Public Resources" General Fund category) |
+| `data/fy2027_proposed_data.json` | The [FY2027 Proposed Annual Budget](https://www.huntsvilleal.gov/wp-content/uploads/2026/09/1.-Full-Book.pdf)'s "Top Revenue Sources" table (pp.6-8, FY2021 actual through FY2027 proposed) and General Fund department budget tables (pp.18-23, FY2025 actual/FY2026 revised/FY2027 proposed) |
 
 `department_data.json` also carries each department's actual spend split into Personnel / Operating / Capital
 (and Debt Service into Principal / Interest), transcribed from the same GF budget-actual schedule's line items.
@@ -97,6 +98,25 @@ the Management's Discussion & Analysis enrollment table.
 - The ACFR never separates "sales tax" from "use tax," and the City's sales/use tax rate has been flat
   at 4.5% for all ten years on record -- there's no further split available for that category beyond
   which fund it lands in.
+
+### FY2026-FY2027 planned-budget methodology
+
+Budget Flow and the Income & Expense Tree also cover FY2026 and FY2027, built from the City's budget
+books rather than an audited ACFR, with narrower fund coverage than the FY2021-2025 actuals:
+
+- **FY2026** uses the FY2027 Proposed Budget Book's "Projected FY2026" revenue column and "Revised
+  Budget FY2026" expenditure column, plus the FY2026 Adopted Budget Book's own ten-year plan for the
+  1990 & 2014 Capital Improvement Funds (first-year figures -- the FY2027 book has no CIP section at
+  all). Grants Fund isn't itemized in either source, so it's left out.
+- **FY2027** uses the Proposed Budget Book's own FY2027 columns, covering only the General Fund and
+  "Other Governmental Funds" (Lodging & Liquor Tax Fund plus the Gas Tax, HCS Support, 6.5 Mill, and
+  TIF Special Revenue Funds). No Capital Improvement Fund data exists for FY2027, so capital spending
+  is understated relative to FY2026.
+- Both years exclude inter-fund transfers and fund-balance draws from the revenue/expenditure
+  categories -- they show up via the automatic balancing flow instead, same as the audited years.
+- TIF district property tax revenue is filed under the closest existing category, "Taxes (PBA
+  Cummings Research Park Fund)." CIP debt service has no principal/interest split in the source, so
+  it's lumped entirely under Debt Service Principal.
 
 ## Running locally
 

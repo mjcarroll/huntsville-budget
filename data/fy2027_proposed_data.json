@@ -1,0 +1,142 @@
+{
+  "note": "FY2027 Proposed Annual Budget (planned, not an audited actual). 'topRevenueSources' is the budget book's own 'Top Revenue Sources' table: FY2021-FY2025 actual, FY2026 projected, FY2027 proposed. 'generalFundDepartments' is the General Fund department-by-department budget table: FY2025 actual, FY2026 revised budget, FY2027 proposed budget, grouped into the same functional categories used for the FY2021-FY2025 actuals elsewhere on this site (General Government, Public Safety, Public Services, Urban Development). The proposed budget book doesn't break 'Special Appropriations' or 'General Operations' out by department the way the audited actuals do, so General Operations is carried as a single line and Special Appropriations is omitted here (see the Special Appropriations panel for that detail). Source: FY2027 Proposed Annual Budget, City of Huntsville, Alabama.",
+  "topRevenueSources": {
+    "years": [2021, 2022, 2023, 2024, 2025, 2026, 2027],
+    "basis": ["Actual", "Actual", "Actual", "Actual", "Actual", "Projected", "Proposed"],
+    "series": {
+      "Sales and Use Taxes": [257843999, 288732923, 308426591, 315273910, 315133155, 324052561, 332300000],
+      "Ad Valorem Taxes": [76334406, 93622533, 108096801, 129636930, 139410686, 136752428, 138981019],
+      "License Fees": [24875255, 28821664, 29333194, 30618356, 32880483, 33411251, 33460000],
+      "PILOTs": [27202059, 26919912, 27862957, 31066445, 32081962, 32402046, 32778594],
+      "Simplified Sellers Use Tax": [9744501, 13247873, 15574963, 17768453, 20116432, 22496944, 25865000],
+      "Lodging Taxes": [13139614, 16624963, 19554483, 19763541, 20437561, 25440130, 22626083],
+      "Permit Fees": [10754503, 12013038, 13039175, 9518801, 8239508, 7429000, 7779000]
+    }
+  },
+  "generalFundDepartments": {
+    "years": [2025, 2026, 2027],
+    "basis": ["Actual", "Revised Budget", "Proposed Budget"],
+    "departments": {
+      "General Government": {
+        "Administration": {
+          "Personnel": [3172369, 3274680, 3818846],
+          "Operating": [242265, 310763, 308563]
+        },
+        "City Clerk": {
+          "Personnel": [919705, 1016308, 1049902],
+          "Operating": [237784, 1224220, 529250],
+          "Capital": [93387, 0, 56000]
+        },
+        "City Council": {
+          "Personnel": [498309, 521910, 559647],
+          "Operating": [30875, 136000, 62300]
+        },
+        "Finance": {
+          "Personnel": [5839318, 6432617, 6775085],
+          "Operating": [488189, 599000, 599000]
+        },
+        "Fleet Services": {
+          "Personnel": [4441325, 4987132, 5394338],
+          "Operating": [4989770, 5303359, 6130386],
+          "Capital": [105001, 104000, 110000]
+        },
+        "General Operations": {
+          "Operating": [6431943, 6490707, 6950619]
+        },
+        "Human Resources": {
+          "Personnel": [1806623, 2095752, 2164595],
+          "Operating": [2497413, 2623325, 2769600]
+        },
+        "IT Services": {
+          "Personnel": [4765223, 5275037, 5475687],
+          "Operating": [5932235, 8686537, 10150891],
+          "Capital": [2508034, 5635793, 50000]
+        },
+        "Legal": {
+          "Personnel": [2988163, 3177474, 3193970],
+          "Operating": [1834543, 2355000, 2365000]
+        }
+      },
+      "Public Safety": {
+        "Animal Services": {
+          "Personnel": [2830515, 3169268, 3485677],
+          "Operating": [642641, 749222, 766100],
+          "Capital": [53345, 0, 0]
+        },
+        "Fire and Rescue": {
+          "Personnel": [56548962, 60174685, 65844643],
+          "Operating": [3520934, 4129449, 4721137],
+          "Capital": [2041047, 658039, 915000]
+        },
+        "Municipal Court": {
+          "Personnel": [4391494, 4995176, 5300173],
+          "Operating": [817796, 919317, 894317],
+          "Capital": [53749, 5000, 30000]
+        },
+        "Police": {
+          "Personnel": [67641969, 71757061, 81887835],
+          "Operating": [4663260, 5391854, 6524798],
+          "Capital": [410309, 4066804, 396000]
+        }
+      },
+      "Public Services": {
+        "Cemetery": {
+          "Personnel": [1378364, 1477803, 1558357],
+          "Operating": [346714, 365197, 346717]
+        },
+        "General Services": {
+          "Personnel": [5290099, 5944796, 6798372],
+          "Operating": [13120358, 14522867, 15099897]
+        },
+        "Landscape Management": {
+          "Personnel": [13842622, 15255456, 15933253],
+          "Operating": [5269155, 6510490, 6751980],
+          "Capital": [112471, 115000, 120750]
+        },
+        "Parking": {
+          "Personnel": [2024459, 2266802, 2637437],
+          "Operating": [996963, 1199133, 1262033],
+          "Capital": [237179, 223000, 389000]
+        },
+        "Parks and Recreation": {
+          "Personnel": [10265740, 12196542, 13812263],
+          "Operating": [754588, 897600, 976284]
+        },
+        "Public Works": {
+          "Personnel": [11777918, 13163851, 13960578],
+          "Operating": [1097607, 1588551, 1569251],
+          "Capital": [1935, 22500, 22500]
+        }
+      },
+      "Urban Development": {
+        "Code Enforcement": {
+          "Personnel": [1864827, 2007609, 2059494],
+          "Operating": [89349, 183706, 192202]
+        },
+        "Engineering": {
+          "Personnel": [3730912, 3969148, 4505067],
+          "Operating": [63258, 135236, 132736]
+        },
+        "Inspection": {
+          "Personnel": [3671169, 4074361, 4336474],
+          "Operating": [115227, 142772, 104873]
+        },
+        "Natural Resources": {
+          "Personnel": [991913, 1129572, 1188099],
+          "Operating": [68648, 65217, 61522],
+          "Capital": [43094, 78750, 85000]
+        },
+        "Planning": {
+          "Personnel": [4388149, 5640244, 5456132],
+          "Operating": [773931, 1245883, 867450],
+          "Capital": [40155, 52913, 20000]
+        },
+        "Traffic Engineering": {
+          "Personnel": [4010586, 4457717, 4630238],
+          "Operating": [491183, 681026, 737565],
+          "Capital": [0, 31500, 31500]
+        }
+      }
+    }
+  }
+}

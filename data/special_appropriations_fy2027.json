@@ -1,0 +1,108 @@
+{
+  "note": "FY2027 Proposed Outside Agency Appropriations book (planned, not an audited actual) -- itemized detail behind the 'Special Appropriations' lines that appear as single lump figures in the FY2021-2025 actuals elsewhere on this site. The category taxonomy changed from the FY2026 Adopted Budget Book: General Fund categories were reorganized (e.g. FY2026's 'Quality of Life' and 'Aging Services' are folded into 'Community Connections' and other categories here), and the Huntsville-Madison County Public Library moved from a separate 'Intergovernmental & Contracts' bucket into a new 'Public Resources' category within the General Fund grouping. Source: FY2027 Proposed Outside Agency Appropriations, City of Huntsville, Alabama.",
+  "generalFund": {
+    "total": 9405543,
+    "categories": {
+      "Community Connections": {
+        "total": 510000,
+        "agencies": {
+          "Huntsville Senior Center - Studio 60": 450000,
+          "Not One More Alabama": 10000,
+          "United Way of Madison County": 50000
+        }
+      },
+      "Economic Development & Workforce": {
+        "total": 445000,
+        "agencies": {
+          "Downtown Huntsville, Inc.": 90000,
+          "Hatch Huntsville": 40000,
+          "IDefy": 10000,
+          "Invest Northwest": 35000,
+          "North Alabama Homebuilding Academy": 200000,
+          "North Alabama International Trade Association": 35000,
+          "South Huntsville Main Business Association": 35000
+        }
+      },
+      "Education & Youth Services": {
+        "total": 405000,
+        "agencies": {
+          "100 Black Men of Greater Huntsville": 10000,
+          "Big Brothers Big Sisters": 25000,
+          "Boys & Girls Clubs of North Alabama": 150000,
+          "The Caring Link": 20000,
+          "Free2Teach": 20000,
+          "Girls, Inc.": 25000,
+          "Huntsville Learning Center": 40000,
+          "National Coalition of 100 Black Women - Greater Huntsville Chapter": 10000,
+          "Village of Promise": 60000,
+          "YMCA - Child Care Centers": 45000
+        }
+      },
+      "Healthcare": {
+        "total": 1160000,
+        "agencies": {
+          "Community Free Dental Clinic": 100000,
+          "Heals, Inc.": 35000,
+          "Huntsville Hospital Foundation": 25000,
+          "Neighborhood Nursing - UAH": 50000,
+          "Parkinson's Dynamics": 25000,
+          "WellStone": 925000
+        }
+      },
+      "Housing & Basic Needs": {
+        "total": 430000,
+        "agencies": {
+          "Ability Plus": 40000,
+          "Catholic Center of Concern": 50000,
+          "Christmas Charities Year Round": 20000,
+          "Community Action Partnership": 75000,
+          "Enable Madison County": 20000,
+          "Family Services Center": 10000,
+          "First Stop": 170000,
+          "New Futures": 40000,
+          "ShowerUp": 5000
+        }
+      },
+      "Legal Services & Advocacy": {
+        "total": 215000,
+        "agencies": {
+          "Grandparents As Parents": 25000,
+          "Legal Services of Alabama": 50000,
+          "Madison County 310 Board": 40000,
+          "National Children's Advocacy Center": 50000,
+          "Partnership for a Drug-Free Community": 50000
+        }
+      },
+      "Neighborhoods & Green Spaces": {
+        "total": 233543,
+        "agencies": {
+          "Huntsville Community Watch Association": 23543,
+          "Land Trust of North Alabama": 125000,
+          "Second Mile": 35000,
+          "Singing River Trail": 50000
+        }
+      },
+      "Public Resources": {
+        "total": 6007000,
+        "agencies": {
+          "Huntsville-Madison County Public Library": 6007000
+        }
+      }
+    }
+  },
+  "lodgingAndLiquorTaxFund": {
+    "total": 4650000,
+    "agencies": {
+      "Arts Huntsville": 575000,
+      "Burritt on the Mountain": 635000,
+      "EarlyWorks Museum": 760000,
+      "Historic Huntsville Foundation": 30000,
+      "Huntsville Ballet Company": 50000,
+      "Huntsville Botanical Garden": 560000,
+      "Huntsville Museum of Art": 1450000,
+      "Huntsville Symphony Orchestra": 195000,
+      "U.S. Space & Rocket Center": 325000,
+      "Weeden House Museum": 70000
+    }
+  }
+}

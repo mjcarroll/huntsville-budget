@@ -54,24 +54,6 @@
     Charts.renderLegend(document.getElementById('debt-noncapital-legend'), [
       { items: [{ label: 'Debt service as % of noncapital expenditures', color: App.cssVar('--status-warn'), line: true }] },
     ]);
-
-    const cip = App.state.cip;
-    if (cip) {
-      Charts.stackedArea(document.getElementById('cip-chart'), {
-        years: cip.years, height: 260,
-        seriesDef: [
-          { key: 'cip1990', label: '1990 Capital Improvement Fund', colorVar: '--series-1' },
-          { key: 'cip2014', label: '2014 Capital Improvement Fund', colorVar: '--series-2' },
-        ],
-        values: { cip1990: cip.cip1990.total_expenditures, cip2014: cip.cip2014.total_expenditures },
-      });
-      Charts.renderLegend(document.getElementById('cip-legend'), [
-        { items: [
-          { label: '1990 Capital Improvement Fund (streets, facilities, fleet, parks)', color: App.cssVar('--series-1') },
-          { label: '2014 Capital Improvement Fund (roads, drainage, economic development)', color: App.cssVar('--series-2') },
-        ] },
-      ]);
-    }
   }
 
   App.registerView('debt', { onShow() { render(); } });

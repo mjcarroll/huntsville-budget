@@ -49,6 +49,14 @@
     return { name, children: real };
   }
 
+  function pickDeptData(year) {
+    const dept = App.state.dept;
+    if (dept.years.includes(year)) return dept;
+    const fy2027 = App.state.fy2027;
+    if (fy2027 && fy2027.generalFundDepartments.years.includes(year)) return fy2027.generalFundDepartments;
+    return dept;
+  }
+
   function buildExpenditureTree(yearData, deptData, year) {
     const funds = yearData.funds;
     const deptYearIdx = deptData ? deptData.years.indexOf(year) : -1;
@@ -195,19 +203,24 @@
 
   function render() {
     const budget = App.state.budget;
-    const dept = App.state.dept;
+    const year = Number(currentYear);
+    const dept = pickDeptData(year);
     const yearData = budget[currentYear];
 
     const revTree = buildRevenueTree(yearData);
-    const expTree = buildExpenditureTree(yearData, dept, Number(currentYear));
+    const expTree = buildExpenditureTree(yearData, dept, year);
 
     revIcicle = renderTreemap(document.getElementById('tree-rev-chart'), document.getElementById('tree-rev-breadcrumb'), revTree);
     expIcicle = renderTreemap(document.getElementById('tree-exp-chart'), document.getElementById('tree-exp-breadcrumb'), expTree);
 
-    const hasDept = dept.years.includes(Number(currentYear));
+    const hasDept = dept.years.includes(year);
     document.getElementById('tree-exp-desc').textContent = hasDept
       ? 'Fund → function → department (General Fund only, where disclosed).'
       : 'Fund → function.';
+
+    const noteEl = document.getElementById('tree-note');
+    if (yearData.note) { noteEl.textContent = yearData.note; noteEl.style.display = ''; }
+    else { noteEl.style.display = 'none'; }
   }
 
   function initYearButtons() {

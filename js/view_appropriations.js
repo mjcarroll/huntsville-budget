@@ -5,6 +5,13 @@
     "Lodging & Liquor Tax Fund": "--series-3",
   };
 
+  const YEARS = [
+    { key: 'fy2026', label: 'FY2026', file: 'data/special_appropriations_fy2026.json', source: 'FY2026 Adopted Budget Book, pp.68-70' },
+    { key: 'fy2027', label: 'FY2027', file: 'data/special_appropriations_fy2027.json', source: 'FY2027 Proposed Outside Agency Appropriations book' },
+  ];
+  let currentYear = YEARS[YEARS.length - 1].key;
+  const cache = {};
+
   function shade(hex, depth) {
     const c = d3.hsl(hex);
     const t = Math.min(0.6, (depth - 1) * 0.18);
@@ -20,28 +27,54 @@
     return maxChars > 1 ? text.slice(0, maxChars - 1) + '…' : '';
   }
 
-  function buildData(data) {
+  function buildData(data, yearLabel) {
     const gfCategories = Object.entries(data.generalFund.categories).map(([catName, cat]) => ({
       name: catName,
       children: Object.entries(cat.agencies).map(([name, value]) => ({ name, value })),
     }));
 
-    const igEntries = Object.entries(data.intergovernmentalAndContracts.agencies).map(([name, value]) => ({ name, value }));
+    const children = [{ name: "General Fund Agencies", children: gfCategories }];
+
+    if (data.intergovernmentalAndContracts) {
+      const igEntries = Object.entries(data.intergovernmentalAndContracts.agencies).map(([name, value]) => ({ name, value }));
+      children.push({ name: "Intergovernmental & Contracts", children: igEntries });
+    }
+
     const lltEntries = Object.entries(data.lodgingAndLiquorTaxFund.agencies).map(([name, value]) => ({ name, value }));
+    children.push({ name: "Lodging & Liquor Tax Fund", children: lltEntries });
 
     return {
-      name: "Special Appropriations (FY2026 planned)",
-      children: [
-        { name: "General Fund Agencies", children: gfCategories },
-        { name: "Intergovernmental & Contracts", children: igEntries },
-        { name: "Lodging & Liquor Tax Fund", children: lltEntries },
-      ],
+      name: `Special Appropriations (${yearLabel} planned)`,
+      children,
     };
   }
 
+  function renderToggle() {
+    const container = document.getElementById('approp-year-toggle');
+    container.innerHTML = '';
+    YEARS.forEach(y => {
+      const btn = document.createElement('button');
+      btn.className = 'pill-btn' + (y.key === currentYear ? ' active' : '');
+      btn.textContent = y.label;
+      btn.onclick = () => {
+        currentYear = y.key;
+        container.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        render(document.getElementById('approp-chart'));
+      };
+      container.appendChild(btn);
+    });
+  }
+
   function render(container) {
-    fetch('data/special_appropriations_fy2026.json').then(r => r.json()).then(data => {
-      const treeData = buildData(data);
+    const yearDef = YEARS.find(y => y.key === currentYear);
+    document.getElementById('approp-title').innerHTML = `What's in "Special Appropriations"? <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(${yearDef.label} planned, not actual)</span>`;
+    document.getElementById('approp-desc').textContent = `The FY2021–FY2025 actuals above only report "Special Appropriations" as a single lump per functional group. No historical budget book is archived, but the City's ${yearDef.label} budget book itemizes every nonprofit/agency award — General Fund awards by category, Library funding, and the Lodging & Liquor Tax Fund's support for local museums and cultural institutions. Source: ${yearDef.source}.`;
+
+    const dataPromise = cache[currentYear] ? Promise.resolve(cache[currentYear]) : fetch(yearDef.file).then(r => r.json()).then(data => { cache[currentYear] = data; return data; });
+
+    dataPromise.then(data => {
+      const treeData = buildData(data, yearDef.label);
       const root = d3.hierarchy(treeData).sum(d => d.value || 0).sort((a, b) => b.value - a.value);
       const width = Math.max(340, container.clientWidth);
       const height = Math.max(340, Math.round(width * 0.55));
@@ -99,10 +132,18 @@
       });
 
       Charts.renderLegend(document.getElementById('approp-legend'), [
-        { items: Object.entries(SOURCE_COLOR).map(([label, colorVar]) => ({ label, color: App.cssVar(colorVar) })) },
+        { items: Object.entries(SOURCE_COLOR)
+            .filter(([label]) => label !== "Intergovernmental & Contracts" || data.intergovernmentalAndContracts)
+            .map(([label, colorVar]) => ({ label, color: App.cssVar(colorVar) })) },
       ]);
     });
   }
 
-  window.Appropriations = { render: () => render(document.getElementById('approp-chart')) };
+  let toggleInit = false;
+  window.Appropriations = {
+    render: () => {
+      if (!toggleInit) { renderToggle(); toggleInit = true; }
+      render(document.getElementById('approp-chart'));
+    },
+  };
 })();

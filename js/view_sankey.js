@@ -71,6 +71,10 @@
     const yearData = DATA[currentYear];
     const { nodes, links, totalRevenue, totalExpenditure } = buildGraph(yearData);
 
+    const noteEl = document.getElementById('sankey-note');
+    if (yearData.note) { noteEl.textContent = yearData.note; noteEl.style.display = ''; }
+    else { noteEl.style.display = 'none'; }
+
     let width = Math.max(760, container.clientWidth);
     let height = window.innerWidth < 700 ? 980 : 880;
     const margin = { top: 6, right: 6, bottom: 6, left: 6 };

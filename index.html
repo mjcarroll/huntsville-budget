@@ -48,8 +48,9 @@
   <div class="view active" id="view-sankey">
     <div class="panel">
       <h2>Budget Flow</h2>
-      <p class="desc">Governmental fund revenues by source, flowing through each fund, to expenditures by function.</p>
+      <p class="desc">Governmental fund revenues by source, flowing through each fund, to expenditures by function. FY2021&ndash;FY2025 are audited actuals; FY2026&ndash;FY2027 are planned years with narrower fund coverage.</p>
       <div class="controls"><span class="label">Fiscal year</span><div id="sankey-years"></div></div>
+      <p class="desc" id="sankey-note" style="display:none;color:var(--status-warn);"></p>
       <div id="sankey-chart"></div>
       <div class="stat-row" id="sankey-stats"></div>
       <div class="legend" id="sankey-legend"></div>
@@ -60,8 +61,9 @@
   <div class="view" id="view-tree">
     <div class="panel">
       <h2>Income &amp; Expense Tree</h2>
-      <p class="desc">Click a rectangle to drill in; click the breadcrumb to back out. Width is proportional to dollars at every level.</p>
+      <p class="desc">Click a rectangle to drill in; click the breadcrumb to back out. Width is proportional to dollars at every level. FY2021&ndash;FY2025 are audited actuals; FY2026&ndash;FY2027 are planned years with narrower fund coverage.</p>
       <div class="controls"><span class="label">Fiscal year</span><div id="tree-years"></div></div>
+      <p class="desc" id="tree-note" style="display:none;color:var(--status-warn);"></p>
     </div>
     <div class="row">
       <div class="panel">
@@ -107,6 +109,12 @@
       <p class="desc">"Taxes" broken out by source, citywide, FY2016&ndash;FY2025.</p>
       <div id="tax-detail-chart"></div>
       <div class="legend" id="tax-detail-legend"></div>
+    </div>
+    <div class="panel">
+      <h2>Looking Ahead: Top Revenue Sources <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(FY2026&ndash;FY2027 planned, not actual)</span></h2>
+      <p class="desc">The budget book's own "Top Revenue Sources" table &mdash; a narrower set of categories than the ACFR-based charts above. FY2021&ndash;FY2025 actual, FY2026 projected, FY2027 proposed. Source: FY2027 Proposed Annual Budget.</p>
+      <div id="revenue-forecast-chart"></div>
+      <div class="legend" id="revenue-forecast-legend"></div>
     </div>
   </div>
 
@@ -161,12 +169,6 @@
       <div id="debt-noncapital-chart"></div>
       <div class="legend" id="debt-noncapital-legend"></div>
     </div>
-    <div class="panel">
-      <h2>Looking Ahead: 10-Year Capital Improvement Plan <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(planned, not actual)</span></h2>
-      <p class="desc">Planned capital expenditures, FY2026&ndash;FY2035, from the FY2026 Adopted Budget Book's 1990 and 2014 Capital Improvement Fund ten-year plans &mdash; a forward-looking budget projection, not an audited actual.</p>
-      <div id="cip-chart"></div>
-      <div class="legend" id="cip-legend"></div>
-    </div>
   </div>
 
   <!-- ===================== PER CAPITA ===================== -->
@@ -198,8 +200,18 @@
       <p class="desc" style="margin-top:10px;">Covers the "General Fund - General Fund" budgetary fund; a few small blended component funds (Health &amp; Life Benefits, etc.) aren't broken out by department, so totals here run slightly under the Budget Flow view's General Fund figure. "Special Appropriations" lines and Debt Service aren't split into Personnel/Operating/Capital in the source schedule.</p>
     </div>
     <div class="panel">
-      <h2>What's in "Special Appropriations"? <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(FY2026 planned, not actual)</span></h2>
-      <p class="desc">The FY2021&ndash;2025 actuals above only report "Special Appropriations" as a single lump per functional group. No historical budget book is archived, but the current FY2026 Adopted Budget itemizes every nonprofit/agency award &mdash; General Fund awards by category, Library funding, and the Lodging &amp; Liquor Tax Fund's support for local museums and cultural institutions.</p>
+      <h2 id="dept-proposed-title">Looking Ahead: General Fund Expenditures by Functional Group <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(FY2026&ndash;FY2027 planned, not actual)</span></h2>
+      <p class="desc" id="dept-proposed-desc">FY2025 actual, FY2026 revised budget, FY2027 proposed budget. Click a group below to see its departments, then a department to see its Personnel / Operating / Capital split.</p>
+      <div class="dept-toggle" id="dept-proposed-toggle"></div>
+      <div class="dept-toggle" id="dept-proposed-subtoggle"></div>
+      <div id="dept-proposed-chart"></div>
+      <div class="legend" id="dept-proposed-legend"></div>
+      <p class="desc" style="margin-top:10px;">Source: FY2027 Proposed Annual Budget. "General Operations" (a catch-all General Government line) isn't broken into Personnel/Operating/Capital in the proposed budget book, so it's carried as a single line here. "Special Appropriations" isn't broken out by functional group either &mdash; see the panel below for that detail.</p>
+    </div>
+    <div class="panel">
+      <h2 id="approp-title">What's in "Special Appropriations"? <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(planned, not actual)</span></h2>
+      <p class="desc" id="approp-desc">The FY2021&ndash;2025 actuals above only report "Special Appropriations" as a single lump per functional group. No historical budget book is archived, but the City's budget books itemize every nonprofit/agency award &mdash; General Fund awards by category, Library funding, and the Lodging &amp; Liquor Tax Fund's support for local museums and cultural institutions.</p>
+      <div class="dept-toggle" id="approp-year-toggle"></div>
       <div id="approp-chart"></div>
       <div class="legend" id="approp-legend"></div>
     </div>
@@ -334,6 +346,7 @@
 <script src="js/view_percapita.js"></script>
 <script src="js/view_appropriations.js"></script>
 <script src="js/view_departments.js"></script>
+<script src="js/view_departments_proposed.js"></script>
 <script src="js/view_hcs.js"></script>
 <script>App.boot();</script>
 </body>

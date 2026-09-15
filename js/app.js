@@ -1,5 +1,5 @@
 const App = (() => {
-  const state = { budget: null, trend: null, dept: null, cip: null, hcs: null };
+  const state = { budget: null, trend: null, dept: null, hcs: null };
 
   function cssVar(name, el) {
     return getComputedStyle(el || document.documentElement).getPropertyValue(name).trim();
@@ -35,18 +35,18 @@ const App = (() => {
   function hideTooltip() { tooltip.style.opacity = 0; }
 
   async function loadData() {
-    const [budget, trend, dept, cip, hcs] = await Promise.all([
+    const [budget, trend, dept, hcs, fy2027] = await Promise.all([
       fetch('data/budget_data.json').then(r => r.json()),
       fetch('data/trend_data.json').then(r => r.json()),
       fetch('data/department_data.json').then(r => r.json()),
-      fetch('data/cip_data.json').then(r => r.json()),
       fetch('data/hcs_data.json').then(r => r.json()),
+      fetch('data/fy2027_proposed_data.json').then(r => r.json()),
     ]);
     state.budget = budget;
     state.trend = trend;
     state.dept = dept;
-    state.cip = cip;
     state.hcs = hcs;
+    state.fy2027 = fy2027;
   }
 
   const views = {};

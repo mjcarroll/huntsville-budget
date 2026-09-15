@@ -1358,5 +1358,334 @@
     8427394
    ]
   }
+ },
+ "2026": {
+  "note": "FY2026 Revised Budget (planned, not an audited actual) -- General Fund, the 1990/2014 Capital Improvement Funds, and Special Revenue Funds; Grants Fund is omitted. Full methodology in the README.",
+  "funds": [
+   "General Fund",
+   "Capital Improvements Fund",
+   "Other Governmental Funds"
+  ],
+  "revenues": {
+   "Sales & Use Tax": [
+    171046536,
+    110350000,
+    0
+   ],
+   "Property Tax": [
+    37658729,
+    0,
+    0
+   ],
+   "Simplified Sellers Use Tax": [
+    22496944,
+    0,
+    0
+   ],
+   "Other Taxes (General Fund)": [
+    15404890,
+    0,
+    0
+   ],
+   "Taxes (Lodging & Liquor Tax Fund)": [
+    0,
+    0,
+    27384426
+   ],
+   "Taxes (6.5 Mill Public Safety Debt Fund)": [
+    0,
+    0,
+    34835573
+   ],
+   "Taxes (6.5 Mill School Property Tax Fund)": [
+    0,
+    0,
+    39525812
+   ],
+   "Taxes (School Property Tax Fund)": [
+    0,
+    0,
+    36470000
+   ],
+   "Taxes (1990 School Support Fund)": [
+    0,
+    0,
+    0
+   ],
+   "Taxes (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    16295549
+   ],
+   "Building Permits": [
+    7429000,
+    0,
+    0
+   ],
+   "Other Licenses & Permits": [
+    33411252,
+    0,
+    0
+   ],
+   "Fines & Forfeitures": [
+    2251000,
+    0,
+    0
+   ],
+   "Sanitation Charges (General Fund)": [
+    0,
+    0,
+    0
+   ],
+   "Parking Charges (General Fund)": [
+    3354000,
+    0,
+    0
+   ],
+   "Other Charges for Services (General Fund)": [
+    3860500,
+    0,
+    0
+   ],
+   "Charges for Services (Other Funds)": [
+    0,
+    0,
+    0
+   ],
+   "Intergovernmental": [
+    1569530,
+    1987000,
+    5740900
+   ],
+   "Interest": [
+    10001099,
+    0,
+    20000
+   ],
+   "Recreational Revenue (General Fund)": [
+    0,
+    0,
+    0
+   ],
+   "Contributions (General Fund)": [
+    0,
+    0,
+    0
+   ],
+   "Other Miscellaneous (General Fund)": [
+    33908069,
+    0,
+    0
+   ],
+   "Miscellaneous (Other Funds)": [
+    0,
+    1124595,
+    0
+   ]
+  },
+  "expenditures": {
+   "General Government": [
+    70608758,
+    0,
+    0
+   ],
+   "Public Safety": [
+    151286032,
+    0,
+    0
+   ],
+   "Public Services": [
+    75389088,
+    0,
+    21280553
+   ],
+   "Urban Development": [
+    23732491,
+    0,
+    0
+   ],
+   "Intergovernmental Assist.": [
+    0,
+    0,
+    0
+   ],
+   "Intergovernmental Assist. (School Property Tax Fund)": [
+    0,
+    0,
+    36470000
+   ],
+   "Intergovernmental Assist. (PBA Cummings Research Park Fund)": [
+    0,
+    0,
+    0
+   ],
+   "Capital Outlay": [
+    10993299,
+    119705900,
+    0
+   ],
+   "Debt Service Principal": [
+    0,
+    20801408,
+    58478944
+   ],
+   "Debt Service Interest": [
+    0,
+    0,
+    0
+   ],
+   "Debt Service Issuance Costs": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "2027": {
+  "note": "FY2027 Proposed Budget (planned, not an audited actual) -- General Fund and Special Revenue Funds only. No Capital Improvement Fund data is available this year, so capital spending is understated. Full methodology in the README.",
+  "funds": [
+   "General Fund",
+   "Other Governmental Funds"
+  ],
+  "revenues": {
+   "Sales & Use Tax": [
+    176930000,
+    0
+   ],
+   "Property Tax": [
+    40836846,
+    0
+   ],
+   "Simplified Sellers Use Tax": [
+    25865000,
+    0
+   ],
+   "Other Taxes (General Fund)": [
+    17220000,
+    0
+   ],
+   "Taxes (Lodging & Liquor Tax Fund)": [
+    0,
+    29471083
+   ],
+   "Taxes (6.5 Mill Public Safety Debt Fund)": [
+    0,
+    36504479
+   ],
+   "Taxes (6.5 Mill School Property Tax Fund)": [
+    0,
+    41473281
+   ],
+   "Taxes (School Property Tax Fund)": [
+    0,
+    38640000
+   ],
+   "Taxes (1990 School Support Fund)": [
+    0,
+    0
+   ],
+   "Taxes (PBA Cummings Research Park Fund)": [
+    0,
+    20916413
+   ],
+   "Building Permits": [
+    7779000,
+    0
+   ],
+   "Other Licenses & Permits": [
+    33460000,
+    0
+   ],
+   "Fines & Forfeitures": [
+    2087000,
+    0
+   ],
+   "Sanitation Charges (General Fund)": [
+    0,
+    0
+   ],
+   "Parking Charges (General Fund)": [
+    3347000,
+    0
+   ],
+   "Other Charges for Services (General Fund)": [
+    4083500,
+    0
+   ],
+   "Charges for Services (Other Funds)": [
+    0,
+    0
+   ],
+   "Intergovernmental": [
+    1206900,
+    5962000
+   ],
+   "Interest": [
+    11000000,
+    350000
+   ],
+   "Recreational Revenue (General Fund)": [
+    0,
+    0
+   ],
+   "Contributions (General Fund)": [
+    0,
+    0
+   ],
+   "Other Miscellaneous (General Fund)": [
+    34278594,
+    0
+   ],
+   "Miscellaneous (Other Funds)": [
+    0,
+    0
+   ]
+  },
+  "expenditures": {
+   "General Government": [
+    73086222,
+    0
+   ],
+   "Public Safety": [
+    169424680,
+    0
+   ],
+   "Public Services": [
+    80706422,
+    22258229
+   ],
+   "Urban Development": [
+    24271852,
+    0
+   ],
+   "Intergovernmental Assist.": [
+    0,
+    0
+   ],
+   "Intergovernmental Assist. (School Property Tax Fund)": [
+    0,
+    38640000
+   ],
+   "Intergovernmental Assist. (PBA Cummings Research Park Fund)": [
+    0,
+    0
+   ],
+   "Capital Outlay": [
+    2225750,
+    0
+   ],
+   "Debt Service Principal": [
+    0,
+    79173199
+   ],
+   "Debt Service Interest": [
+    0,
+    0
+   ],
+   "Debt Service Issuance Costs": [
+    0,
+    0
+   ]
+  }
  }
 }
